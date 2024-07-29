@@ -14,5 +14,4 @@
 
 预览：
 
-
-<iframe src="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/news.html" frameborder="0" width="1600" height="800"></iframe>
+<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/news.html">点我查看</a>

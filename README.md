@@ -10,7 +10,9 @@
 
 <p>效果：</p>
 
-<img src="img/01/news.png">
+<img src="./preview/01.png">
 
 预览：
 
+
+<iframe src="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/news.html" frameborder="0" width="1600" height="800"></iframe>

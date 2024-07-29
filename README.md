@@ -15,3 +15,16 @@
 预览：
 
 <a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/news.html">点我查看</a>
+
+---
+
+### 案例二：
+
+<img src="./preview/02_1.png">
+<img src="./preview/02_2.png">
+<img src="./preview/02_3.png">
+<img src="./preview/02_4.png">
+
+预览：
+
+<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/02/index.html">点我查看</a>

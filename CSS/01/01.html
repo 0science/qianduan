@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 最大盒子 -->
+    <div class="container">
+        <!-- 头部三个盒子 -->
+        <div class="header">
+            <div class="logo">logo</div>
+            <div class="banner1">banner1</div>
+            <div class="banner2">banner2</div>
+        </div>
+
+        <!-- 菜单盒子 -->
+        <div class="menu">菜单</div>
+
+        <!-- 中间盒子 -->
+        <div class="middle">
+            <!-- 盒子左侧 -->
+                <div class="left">
+                    <div class="box1">栏目一</div>
+                    <div class="box1">栏目二</div>
+                    <div class="box2">栏目三</div>
+                    <div class="box2">栏目四</div>
+                    <div class="box2">栏目五</div>
+                    <div class="box2">栏目六</div>
+                </div>
+
+            <!-- 盒子右侧 -->
+            <div class="right">
+                <div class="box3">栏目七</div>
+                <div class="box3">栏目八</div>
+                <div class="box3">栏目九</div>
+            </div>
+        </div>
+        <div class="footer">页脚</div>
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        height: 1000px;
+        width: 960px;
+        background-color: rgb(255, 255, 255);
+        margin: 0 auto;
+    }
+    .header{
+        height: 80px;
+        width: 100%;
+        line-height: 80px;
+    }
+
+    .logo,.banner1,.banner2,.menu,.middle,.left,.box1,.box2,.box3,.right,.footer{
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgb(221, 221, 221);
+    }
+
+    .logo{
+        height: 80px;
+        width: 200px;
+    }
+    .banner1{
+        height: 80px;
+        width: 540px;
+        margin: 0 10px;
+    }
+    .banner2{
+        height: 80px;
+        width: 200px;
+    }
+    .menu{
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
+        line-height: 30px;
+    }
+    .middle{
+        width: 100%;
+        height: 410px;
+    }
+    .left{
+        width: 760px;
+        height: 410px;
+    }
+    .box1,.box2,.box3{
+        background-color: rgb(167, 167, 167);
+    }
+    .box1{
+        width: 370px;
+        height: 200px;
+        margin-right: 10px;
+        line-height: 200px;
+    }
+    .box2{
+        width: 180px;
+        height: 200px;
+        margin: 10px 10px 10px 0;
+        line-height: 200px;
+    }
+    .right{
+        width: 200px;
+        height: 410px;
+    }
+    .box3{
+        width: 200px;
+        height: 130px;
+        line-height: 130px;
+    }
+    .box3:nth-child(2){
+        margin: 10px 0;
+    }
+    .footer{
+        width: 100%;
+        height: 60px;
+        margin: 10px 0;
+        line-height: 60px;
+    }
+</style>
+</html>

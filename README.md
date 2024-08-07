@@ -1,48 +1,73 @@
 # 前端项目实战
 
-## 前言
+## 一、前言
 
-记录我的前端学习项目经验
+此项目用于记录我的前端学习途中的实战项目
 
-## HTML篇
+## 二、HTML篇
 
-### 案例一：招聘信息
+### 1. 图文混排
+
+#### 1.1 招聘信息
 
 <p>效果：</p>
 
-<img src="./preview/01.png">
+<img border="1" src="./preview/HTML/image-1.1.png">
 
-预览：
-
-<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/news.html">点我查看</a>
+<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/1.1/news.html">预览</a>
 
 ---
 
-### 案例二：
+#### 1.2 简介信息
 
-<img src="./preview/02_1.png">
-<img src="./preview/02_2.png">
-<img src="./preview/02_3.png">
-<img src="./preview/02_4.png">
+<p>效果：</p>
 
-预览：
+<img src="./preview/HTML/image-1.2.png">
 
-<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/02/index.html">点我查看</a>
+<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/1.2/news.html">预览</a>
+
+---
+
+### 2. 链接跳转
+
+### 2.1 产品介绍页
+
+<p>效果：</p>
+
+<img border="1" src="./preview/02_1.png">
+<img border="1" src="./preview/02_2.png">
+<img border="1" src="./preview/02_3.png">
+<img border="1" src="./preview/02_4.png">
+
+<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/02/index.html">预览</a>
+
+---
 
 ### 案例三：表格布局——课程表
 
 ![alt text](<Pasted image 20240727232129.png>)
 
+---
+
 ### 案例四：表单布局——信息表
 
 ![alt text](<Pasted image 20240728091549.png>)
+
+---
 
 ### 案例五：框架布局——网页嵌套
 
 ![alt text](<Pasted image 20240728104257.png>)
 
+---
 
+## CSS
 
+### 浮动布局
+
+![alt text](image-26.png)
+
+---
 
 ## JavaScript
 

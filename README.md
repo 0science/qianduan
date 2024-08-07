@@ -29,6 +29,20 @@
 
 <a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/02/index.html">点我查看</a>
 
+### 案例三：表格布局——课程表
+
+![alt text](<Pasted image 20240727232129.png>)
+
+### 案例四：表单布局——信息表
+
+![alt text](<Pasted image 20240728091549.png>)
+
+### 案例五：框架布局——网页嵌套
+
+![alt text](<Pasted image 20240728104257.png>)
+
+
+
 
 ## JavaScript
 
@@ -113,3 +127,34 @@
 
 效果：
 ![alt text](image-17.png)
+
+### 判断一个数是4的倍数，且不是100的倍数
+需求：
+1. 用户输入一个数
+2. 判断这个数能被4整除，但是不能被100整除
+3. 满足条件，页面弹出true，否则弹出false
+
+效果：
+![alt text](image-18.png)
+![alt text](image-19.png)
+![alt text](image-20.png)
+![alt text](image-21.png)
+
+### 单分支判断
+需求：
+1. 用户输入成绩
+2. 如果分数大于60，则提示恭喜及格
+3. 则提示抱歉，不及格
+
+效果：
+![alt text](image-22.png)
+![alt text](image-23.png)
+![alt text](image-24.png)
+![alt text](image-25.png)
+
+### 判断用户登录
+需求：
+1. 用户输入，
+2. 用户名：pink，密码：123456， 则提示登录成功
+3. 否则提示登录失败
+

@@ -35,25 +35,31 @@
 
 #### 1.2.1 电影影评网
 
-<img border="1" src="./preview/1.1/1.2.1.jpg">
+<img border="1" src="./preview/1.2/1.2.1.jpg">
 
 ---
 
 #### 1.2.2 心灵小屋美文
 
-<img border="1" src="./preview/1.1/1.2.2.jpg">
+<img border="1" src="./preview/1.2/1.2.2.png">
 
 ---
 
 #### 1.2.3 课程表
 
-![alt text](<Pasted image 20240727232129.png>)
+<img border="1" src="./preview/1.2/1.2.3.png">
 
 ---
 
-#### 表单信息填写
+#### 1.2.4 表单信息填写
 
-![alt text](<Pasted image 20240728091549.png>)
+<img border="1" src="./preview/1.2/1.2.4.png">
+
+---
+
+#### 1.2.5 信息登记表
+
+<img border="1" src="./preview/1.2/1.2.5.jpg">
 
 ---
 

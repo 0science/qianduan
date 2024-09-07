@@ -1,75 +1,75 @@
-# 前端项目实战
+# 前端实战案例
 
-## 一、前言
+[TOC]
+
+## 0.前言
 
 此项目用于记录我的前端学习途中的实战项目
 
-## 二、HTML篇
+## 1.HTML与CSS基础
 
-### 1. 图文混排
+### 1.1 图文布局
 
-#### 1.1 招聘信息
+#### 1.1.1 新闻页面 
 
-<p>效果：</p>
 
-<img border="1" src="./preview/HTML/image-1.1.png">
-
-<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/1.1/news.html">预览</a>
+<img border="1" src="./preview/1.1/1.1.1.png">
 
 ---
 
-#### 1.2 简介信息
+#### 1.1.2 简介信息
 
-<p>效果：</p>
-
-<img src="./preview/HTML/image-1.2.png">
-
-<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/01/1.2/news.html">预览</a>
+<img border="1" src="./preview/1.1/1.1.2.png">
 
 ---
 
-### 2. 链接跳转
+#### 1.1.3 产品介绍页跳转
 
-### 2.1 产品介绍页
-
-<p>效果：</p>
-
-<img border="1" src="./preview/02_1.png">
-<img border="1" src="./preview/02_2.png">
-<img border="1" src="./preview/02_3.png">
-<img border="1" src="./preview/02_4.png">
-
-<a href="https://htmlpreview.github.io/?https://github.com/0science/qianduan/blob/master/HTML/02/index.html">预览</a>
+<img border="1" src="./preview/1.1/1.1.3.1.png">
+<img border="1" src="./preview/1.1/1.1.3.2.png">
+<img border="1" src="./preview/1.1/1.1.3.3.png">
 
 ---
 
-### 案例三：表格布局——课程表
+### 1.2 列表布局
+
+#### 1.2.1 电影影评网
+
+<img border="1" src="./preview/1.1/1.2.1.jpg">
+
+---
+
+#### 1.2.2 心灵小屋美文
+
+<img border="1" src="./preview/1.1/1.2.2.jpg">
+
+---
+
+#### 1.2.3 课程表
 
 ![alt text](<Pasted image 20240727232129.png>)
 
 ---
 
-### 案例四：表单布局——信息表
+#### 表单信息填写
 
 ![alt text](<Pasted image 20240728091549.png>)
 
 ---
 
-### 案例五：框架布局——网页嵌套
+#### 网页嵌套
 
 ![alt text](<Pasted image 20240728104257.png>)
 
 ---
 
-## CSS
-
-### 浮动布局
+#### 浮动布局
 
 ![alt text](image-26.png)
 
 ---
 
-## JavaScript
+## 2.JavaScript
 
 ### 控制台输出
 需求：

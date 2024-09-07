@@ -1,0 +1,111 @@
+/* #region 基础设置 开始 */
+
+.container{
+    /* 公用所以不设高度 */
+    width:1190px;
+    margin: 0 auto;
+}
+
+/* #endregion 基础设置 结束 */
+
+/* #region 导航条 开始 */
+.topbar{
+    /* 全展开所以不设宽 */
+    background-color:#ECECEC;
+    height: 30px;
+}
+
+.welcome{
+    height: 30px;
+    line-height: 30px;
+    font-size: 0;
+    color:#666666;
+}
+
+.welcome span,.welcome a{
+    font-size: 12px;
+}
+
+.welcome .hello{
+    margin-right:28px;
+}
+
+.welcome .login{
+    padding-right:8px;
+    border-right:1px solid #666;
+}
+
+.welcome .register{
+    margin-left:8px;
+}
+
+.nav .list{
+    height: 30px;
+    line-height: 30px;
+}
+
+.nav .list li{
+    float: left;
+    padding: 0 15px 0 0;
+}
+
+.nav .list li a{
+    border-right: 1px solid #666;
+    padding: 0 15px 0 0;
+}
+
+.nav .list li :first-child a{
+    padding-left: 0px;
+}
+
+.nav .list :last-child a{
+    padding-right: 0px;
+    border: 0px;
+}
+
+/* #endregion导航条 结束 */
+
+/* #region 头部栏 开始 */
+
+.header{
+    height: 120px;
+    background-color: aqua;
+}
+
+.header .logo{
+    height: 120px;
+    width: 190px;
+}
+
+.header .search{
+    width: 590px;
+    height: 120px;
+    background-color: beige;
+}
+
+.header .search form{
+    height: 120px;
+    margin: 42px 0 42px 0;
+}
+
+.header .search input{
+    width: 508px;
+    height: 36px;
+    border: 1px solid rgba(221,48,45,1);
+    float: left;
+}
+
+.header .search button{
+    width: 80px;
+    height: 36px;
+    background-color:rgba(221,48,45,1);
+    font-size: 0;
+    vertical-align: top;
+}
+
+
+/* #endregion 头部栏 结束 */
+
+/* #region 头部栏 开始 */
+
+/* #endregion 头部栏 结束 */

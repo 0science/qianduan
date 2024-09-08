@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "BOOMBOX";
+    src: url(./BOOMBOX.TTF);
+}
+
+@font-face {
+    font-family: "FZJZJW";
+    src: url(./FZJZJW.TTF);
+}
+
+@font-face {
+    font-family: "LTCH";
+    src: url(./LTCH.TTF);
+}
+
+@font-face {
+    font-family: "ONYX";
+    src: url(./ONYX.TTF);
+}
+@font-face {
+    font-family: "ROCK";
+    src: url(./ROCK.TTF);
+}
+@font-face {
+    font-family: "TCCM____";
+    src: url(./TCCM____.TTF);
+}
+
+
+.one .a{
+    font-family: "ONYX";
+    font-size: 48px;
+    color: #333;
+}
+
+.one .b{
+    font-family: "TCCM____";
+    font-size: 58px;
+    color: #4C9372;
+}
+
+.two .c{
+    font-family: "ROCK";
+    font-size: 24px;
+    color: #8D1C26;
+}
+
+.two .d{
+    font-family: "ROCK";
+    font-size: 36px;
+    color: #4C9372;
+}
+
+h2 .e{
+    font-family: "BOOMBOX";
+    font-size: 58px;
+    color: #000;
+}
+
+h2 .f{
+    font-family: "LTCH";
+    font-size: 36px;
+    color: #333;
+}
+
+.three{
+    font-family: "微软雅黑";
+    font-size: 24px;
+}
+
+.four{
+    font-family: "微软雅黑";
+    font-size: 14px;
+}

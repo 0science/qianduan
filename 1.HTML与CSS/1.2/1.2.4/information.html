@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form action="https://search.jd.com.search">
+
+        <fieldset>
+            <legend>主要内容</legend>
+            <!-- 文本 -->
+            <label for="accounts">账户：</label><input type="text" value="张三" id="accounts" name="account" value="手机号">
+            <br>
+            <!-- 密码 -->
+            <label for="passwords">密码：</label><input type="password" value="123" id="passwords" name="password">
+            <br>
+            <!-- 单选 -->
+            <label >性别：</label>
+            <input type="radio" name="gender" id="male" value="male" checked><label for="male">男</label>
+            <input type="radio" name="gender" id="female" value="female"><label for="female">女</label>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>附加信息</legend>
+                <!-- 多选 -->
+            <label >爱好：</label>
+            <input type="checkbox" name="hobby" id="smoke" value="smoke" checked><label for="smoke">抽烟</label>
+            <input type="checkbox" name="hobby" id="drink" value="drink"><label for="drink">喝酒</label>
+            <input type="checkbox" name="hobby" id="perm" value="perm"><label for="perm">烫头</label>
+            <br>
+            <!-- 隐藏域 -->
+            <input type="hidden" name="form" value="toutiao">
+            <!-- 文本域 -->
+            <label for="other">其他：</label>
+            <textarea name="other" id="other" cols="20" rows="3"></textarea>
+            <br>
+            <!-- 下拉框 -->
+            <label >籍贯：</label>
+            <select name="place">
+                <option value="鄂">湖北</option>
+                <option value="湘">湖南</option>
+                <option value="冀">河北</option>
+                <option value="豫" selected>河南</option>
+            </select>
+            <br>
+        </fieldset>
+        
+        <!-- 按钮 -->
+        <button type="submit">确认</button>
+        <!-- <input type="submit" value="确认"> -->
+        <button type="reset">重置</button>
+        <!-- <input type="reset" value="重置"> -->
+    </form>
+</body>
+</html>

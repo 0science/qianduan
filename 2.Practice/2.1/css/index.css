@@ -446,7 +446,67 @@
 /* #endregion 楼层 结束 */
 
 
-/* #region 主导航栏 开始 */
+/* #region 页脚 开始 */
+.foot{
+    height: 440px;
+    background: #483E3E;
+}
 
-/* #endregion 主导航栏 结束 */
+.links-list{
+    float: left;
+    margin-top: 48px;
+    width: 190px;
+    height: 176px;
+    margin-right: 10px;
+}
+
+.links-list:last-child{
+    margin-right: 0;
+}
+
+.links-list li a{
+    color: white;
+}
+
+.line{
+    height: 1px;
+    background:#584D4D;
+}
+
+.bottom-link{
+    margin-top: 48px;
+    text-align: center;
+}
+
+.bottom-list{
+    display: inline-block;
+}
+
+.bottom-list li{
+    float: left;
+    padding: 0 26px ;
+    border-right: 1px solid #584D4D;
+}
+
+.bottom-list li a{
+    color: #fff;
+}
+
+.bottom-list li:first-child{
+    padding-left: 0;
+}
+
+.bottom-list li:last-child{
+    border-right:0;
+}
+
+.copyright{
+    color: #fff;
+    text-align: center;
+}
+
+.copyright-info{
+    margin-top: 10px;
+}
+/* #endregion 页脚 结束 */
 

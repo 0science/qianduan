@@ -75,7 +75,7 @@
 
 #### 1.4.1网页嵌套
 
-![alt text](<Pasted image 20240728104257.png>)
+<img border="1" src="./preview/1.4/1.4.1.png">
 
 ---
 
@@ -83,7 +83,7 @@
 
 #### 1.5.1 浮动布局
 
-![alt text](image-26.png)
+<img border="1" src="./preview/1.5/1.5.1.png">
 
 ---
 
@@ -91,7 +91,7 @@
 
 ####  1.6.1尚品汇首页
 
-<img border="1" src="./preview/2.1/2.1.1.png">
+<img border="1" src="./preview/1.6/1.6.1.png">
 
 ## 2.JavaScript
 
@@ -104,7 +104,7 @@
 3. 依次控制台打印输出两个变量
 
 效果：
-![alt text](image.png)
+![alt text](preview/image.png)
 
 ### 弹出姓名
 需求： 
@@ -112,8 +112,8 @@
 2. 页面中输出：刚才输入的姓名
 
 效果：
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](preview/image-1.png)
+![alt text](preview/image-2.png)
 
 ### 交换变量的值
 需求：
@@ -121,7 +121,7 @@
 2. 最后变为 num1 里面放的是 20 ， num2 里面放的是 10
 
 效果：
-![alt text](image-3.png)
+![alt text](preview/image-3.png)
 
 ### 输出用户信息
 需求：
@@ -129,10 +129,10 @@
 2. 再输出到网页
 
 效果：
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](preview/image-4.png)
+![alt text](preview/image-5.png)
+![alt text](preview/image-6.png)
+![alt text](preview/image-7.png)
 
 ### 数组取值
 需求：
@@ -140,7 +140,7 @@
 2. 在控制台输出：星期日
 
 效果：
-![alt text](image-8.png)
+![alt text](preview/image-8.png)
 
 ### 计算圆的面积
 需求：
@@ -148,8 +148,8 @@
 2. 算出圆的面积并显示到页面
 
 效果：
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](preview/image-9.png)
+![alt text](preview/image-10.png)
 
 ### 输出用户信息案例
 需求：
@@ -157,9 +157,9 @@
 2. 页面显示： 大家好，我叫xxx，今年xx岁了
 
 效果：
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
+![alt text](preview/image-11.png)
+![alt text](preview/image-12.png)
+![alt text](preview/image-13.png)
 
 ### 输入两数求和
 需求：
@@ -167,9 +167,9 @@
 2. 打印到页面中
 
 效果：
-![alt text](image-14.png)
-![alt text](image-15.png)
-![alt text](image-16.png)
+![alt text](preview/image-14.png)
+![alt text](preview/image-15.png)
+![alt text](preview/image-16.png)
 
 ### 用户订单信息
 需求：
@@ -177,7 +177,7 @@
 2. 自动打印订单信息
 
 效果：
-![alt text](image-17.png)
+![alt text](preview/image-17.png)
 
 ### 判断一个数是4的倍数，且不是100的倍数
 需求：
@@ -186,10 +186,10 @@
 3. 满足条件，页面弹出true，否则弹出false
 
 效果：
-![alt text](image-18.png)
-![alt text](image-19.png)
-![alt text](image-20.png)
-![alt text](image-21.png)
+![alt text](preview/image-18.png)
+![alt text](preview/image-19.png)
+![alt text](preview/image-20.png)
+![alt text](preview/image-21.png)
 
 ### 单分支判断
 需求：
@@ -198,14 +198,22 @@
 3. 则提示抱歉，不及格
 
 效果：
-![alt text](image-22.png)
-![alt text](image-23.png)
-![alt text](image-24.png)
-![alt text](image-25.png)
+![alt text](preview/image-22.png)
+![alt text](preview/image-23.png)
+![alt text](preview/image-24.png)
+![alt text](preview/image-25.png)
 
 ### 判断用户登录
 需求：
 1. 用户输入，
 2. 用户名：pink，密码：123456， 则提示登录成功
 3. 否则提示登录失败
+
+## 3.vue基础
+
+### 3.1 vue语法
+
+#### 3.1.1  HELLO VUE
+
+![alt text](image.png)
 

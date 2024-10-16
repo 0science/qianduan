@@ -3,8 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="../../js/vue.min.js"></script>
 </head>
 <body>
-    
+    <div id="root">
+        <h1>语法汇总</h1>
+        <h2>插值语法</h2>
+        <div>你好，{{name}}</div>
+        <hr>
+        <h2>指令语法</h2>
+        <a :href="url">点击链接跳转</a>
+        <h2>双向绑定</h2>
+        <div>
+            <span>单向绑定：</span><input type="text" v-bind:value="msg1"><br>
+            <span>双向绑定：</span><input type="text" v-model="msg2">
+        </div>
+        
+    </div>
 </body>
+
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    // el的两种写法
+    // const v =  new Vue({
+    //     // el:'#root',
+    //     data:{
+    //         name:'世界',
+    //         url:'https://www.baidu.com',
+    //         msg1:'123',
+    //         msg2:'456'
+    //     }
+    // })
+    // console.log(v)
+
+    // v.$mount('#root')
+
+    new Vue({
+        el:'#root',
+        data:function(){
+            return {
+                name:'世界',
+                url:'https://www.baidu.com',
+                msg1:'123',
+                msg2:'456'
+            }
+        
+        }
+    })
+    
+</script>
 </html>

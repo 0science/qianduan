@@ -215,5 +215,5 @@
 
 #### 3.1.1  HELLO VUE
 
-![alt text](image.png)
+<img border="1" src="./preview/3.1/3.1.1.png">
 

@@ -217,3 +217,6 @@
 
 <img border="1" src="./preview/3.1/3.1.1.png">
 
+#### 3.1.2  VUE数据绑定
+
+

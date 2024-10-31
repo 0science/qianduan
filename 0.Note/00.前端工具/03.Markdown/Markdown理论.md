@@ -501,11 +501,3 @@ A3[A] -- 描述 --> B3[B]
 A6[A] -. 描述 .-> B6[B] 
 A8[A] == 描述 ==> B8[B] 
 ```
-
-# 四、总结
-
-## 参考文献
-
-[【高效工具】《三》Typora直接使用MarkDown语法绘制流程图、时序图、甘特图_黑白猿的博客-CSDN博客](https://blog.csdn.net/gavinbj/article/details/104903318)
-
-[markdown 中流程图详解_markdown流程图_放羊郎的博客-CSDN博客](https://blog.csdn.net/suoxd123/article/details/84992282)

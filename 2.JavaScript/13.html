@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="nav" id="navlist"></div>
+</head>
+<body>
+    <script>
+        var navlistArr = ['首页','新闻','关于'];
+        var str = '<ul>';
+        for(var i in navlistArr){
+            str += '<li><a>'+ navlistArr[i] +'</a></li>';
+        }
+        str += '</ul>';
+        document.getElementById('navlist').innerHTML = str;
+    </script>
+</body>
+</html>

@@ -1,12 +1,35 @@
-## 入门
+[TOC]
+
+## 一、入门
+
+### 1.注意
+
+1. 严格区分大小写
+2. 空格、换行、缩进不敏感
+3. 分号可省略
+
+### 2.引入
+
+async 异步加载
+defer 延迟加载
+
+### 3.常用语句
+
+1. alert() 弹出对话框
+2. console.log() 打印到控制台
+3. prompt() 弹出对话框，返回用户输入的值
+4. confirm() 弹出对话框，返回用户点击的按钮
+5. setInterval() 定时器
+6. setTimeout() 定时器
+7. document.write() 向页面写入内容
 
 ## 语法
 
 ## 数组
 
-### 创建数组
+### 1.创建数组
 
-#### 使用new Array()
+#### 使用new Array() 创建数组
 
 ```
   // 元素值类型为字符型
@@ -19,7 +42,7 @@
   var arr1 = new Array();  // 或 var arr2 = new Array;
 ```
 
-#### 使用 [ ]
+#### 使用 [ ] 创建数组
 
 ```
 var weather = ['wind', 'fine',];      // 相当于：new Array('wind', 'fine',)
@@ -27,8 +50,7 @@ var empty = [];                       // 相当于：new Array
 var mood = ['sad', , , ,'happy'];     // 控制台输出mood：(5) ["sad", empty × 3, "happy"]
 ```
 
-### 数组基本操作
-
+### 2.操作数组
 #### 获取数组长度
 使用.length
 
@@ -59,17 +81,6 @@ arr4.length = 3;
 console.log(arr4);      // 输出结果：(3) ["hehe", "xixi", "gugu"]
 ```
 
-
-#### 访问数组
-使用 数组名\[下标]的方式
-
-```
-var arr = ['hello', 'JavaScript', 22.48, true];
-console.log(arr[0]);
-console.log(arr[2]);
-console.log(arr);
-```
-
 #### 遍历数组
 for in 循环
 ```
@@ -82,13 +93,74 @@ str += '</ul>';
 document.getElementById('navlist').innerHTML = str;
 ```
 
+### 3.操作元素
+
+使用 数组名\[下标]的方式
+
 #### 增加元素
 
+```
+// 为空数组添加元素
+var height = [];
+height[5] =  183;
+height[0] =  175;
+height[3] =  150;
+console.log(height);      // 输出结果：(6) [175, empty × 2, 150, empty, 183]
+
+// 为非空数组添加元素
+var arr = ['Asa', 'Taylor'];
+arr[2] = 'Tom';
+arr[3] =  'Jack';
+console.log(arr);         // 输出结果：(4) ["Asa", "Taylor", "Tom", "Jack"]
+```
+
+#### 删除元素
+
+delete 数组名\[下标]
+删除后依旧占用空间
+
+```
+var stu = ['Tom', 'Jimmy', 'Lucy'];
+console.log(stu);     // 输出结果：(3) ["Tom", "Jimmy", "Lucy"]
+delete stu[1];        // 删除数组中第2个元素
+console.log(stu);     // 输出结果：(3) ["Tom", empty, "Lucy"]
+```
 
 #### 修改元素
 
+```
+var arr = ['a', 'b', 'c', 'd'];
+arr[2] = 123;
+arr[3] = 456;
+console.log(arr);         // 输出结果：(4) ["a", "b", 123, 456]
+```
 
-#### 删除元素 
+解构赋值
+```
+// 传统方式
+var arr = [1, 2, 3];
+var a = arr[0];
+var b = arr[1];
+var c = arr[2];
+
+// ES6解构赋值
+var arr = [1, 2, 3];
+[a, b] = arr;
+console.log(a + ' - ' + b);     // 输出结果：1 - 2
+var n1 = 4, n2 = 8;
+[n1, n2] = [n2, n1];
+console.log(n1 + ' - ' + n2);   // 输出结果：8 - 4
+```
+
+
+#### 查找数组
+
+```
+var arr = ['hello', 'JavaScript', 22.48, true];
+console.log(arr[0]);
+console.log(arr[2]);
+console.log(arr);
+```
 
 ### 数组属性与方法
 

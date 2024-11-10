@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <div class="nav" id="navlist"></div>
 </head>
+
 <body>
     <script>
-        var navlistArr = ['首页','新闻','关于'];
+        var navlistArr = ['首页', '新闻', '关于'];
         var str = '<ul>';
-        for(var i in navlistArr){
-            str += '<li><a>'+ navlistArr[i] +'</a></li>';
+        for (var i in navlistArr) {
+            str += '<li><a>' + navlistArr[i] + '</a></li>';
         }
         str += '</ul>';
         document.getElementById('navlist').innerHTML = str;
+        // 为空数组添加元素
+        var height = [];
+        height[5] = 183;
+        height[0] = 175;
+        height[3] = 150;
+        console.log(height);
+        // 为非空数组添加元素
+        var arr = ['Asa', 'Taylor'];
+        arr[2] = 'Tom';
+        arr[3] = 'Jack';
+        console.log(arr); 
     </script>
 </body>
+
 </html>

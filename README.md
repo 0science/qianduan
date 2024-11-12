@@ -182,7 +182,7 @@
 <img border="1" src="preview/2.2/2.2.7.1.png">
 <img border="1" src="preview/2.2/2.2.7.2.png">
 
-#### 2.3.9 九九乘法表
+#### 2.2.9 九九乘法表
 
 <img border="1" src="preview/2.2/2.2.8.png">
 

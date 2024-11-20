@@ -1,39 +1,22 @@
+[TOC]
+
 # 一、概述
-## 1. 程序语言
-### 1.1 机器语言
 
+## 1.程序语言
 
-低级语言，0和1组成的二进制代码，计算机直接识别。
-
-
-
-### 1.2 汇编语言
-
-
-面向机器的程序设计语言，用英文和字符代替二级制代码。
-
-
-
-### 1.3 高级语言
-
-
-语法类似英文，贴近自然语言。
-
-
-
-## 2. 特点
-| 优点 | 缺点 |
-| --- | --- |
-| 代码量小 | 代码实现周期长 |
+| 程序语言 | 特点                                                 | 举例                      |
+| -------- | ---------------------------------------------------- | ------------------------- |
+| 机器语言 | 低级语言，0和1组成的二进制代码，计算机直接识别。     | 如：`10110000 01100001`   |
+| 汇编语言 | 面向机器的程序设计语言，用英文和字符代替二进制代码。 | 如：`MOV AL, 61h`         |
+| 高级语言 | 语法类似英文，贴近自然语言。                         | 如：C语言、Python、Java等 |
+## 2.特点
+| 优点       | 缺点           |
+| ---------- | -------------- |
+| 代码量小   | 代码实现周期长 |
 | 运行速度快 | 平台库依赖较多 |
-| 功能丰富 | |
+| 功能丰富   |                |
 
-
-
-
-## 3. 应用
-
-
+## 3.应用
 + 嵌入式
 + web开发
 + 高性能服务
@@ -50,56 +33,18 @@
 
 
 
-## 4. 集成开发环境
+## 4.集成开发环境
 
 
 集成开发环境（IDE，Integrated Development Environment ）是用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面工具。集成了代码编写功能、分析功能、编译功能、调试功能等一体化的开发软件服务套。所有具备这一特性的软件或者软件套（组）都可以叫集成开发环境。
 
-
-
-### 4.1 GCC简介
-
-
-**GCC是什么**
-
-
-
-gcc是由 GNU 开发的编程语言编译器。gcc原本作为GNU操作系统的官方编译器，现已被大多数类Unix操作系统（如Linux、BSD、Mac OS X等）采纳为标准的编译器，gcc同样适用于微软的Windows
-
-
-
-**为什么用GCC**
-
-
-
-用编辑器编写程序，由编译器编译后才可以运行
-
-
-
-**GCC有什么好处**
-
-
-
-编译器是将易于编写、阅读和维护的高级计算机语言翻译为计算机能解读、运行的低级机器语言的程序
-
-
-
-### 4.2 GCC安装（空）
-
-
-第一步：下载MinGW  
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307031951250.png)  
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307031951451.png)
-
-
-
-## 5. 第一个C程序
+## 5.第一个C程序
 
 
 ### 5.1 hello.c
 
 
-```plain
+```
 #include<stdio.h>            /*包含头文件stdio.h*/
 int main()                   /*主函数main*/              
 {
@@ -117,7 +62,7 @@ int main()                   /*主函数main*/
 ### 5.2 calculate.c
 
 
-```plain
+```
 #include <stdio.h>                         /*包含头文件stdio.h*/
 #define Height 10                          /*定义常量Height*/
 int calculate(int Long, int Width);        /*用户自定义函数calculate声明*/
@@ -151,21 +96,21 @@ int calculate(int Long, int Width)         /*自定义计算体积函数calculat
 
 
 ### 5.3 代码分析
-| 代码 | 含义 |
-| --- | --- |
-| #include<stido.h> | 包含stdio.h这个头文件 |
-| main()函数 | 主函数，有且只有一个，是C语言程序的入口，程序是从main函数开始执行， |
-| {} | 代码块，一个代码块内部可以有一条或者多条语句，每句以分号结尾 |
-| //     /**/ | 行注释与块注释，编译器忽视的内容，用于解释说明代码内容 |
-| printf函数 | C语言库函数，功能是向标准输出设备输出一个字符串 |
-| \n | 回车换行 |
-| return语句 | 代表函数执行完毕，返回return代表函数的终止，0代表程序执行成功， -1代表程序执行失败 |
-| system函数 | 在已经运行的程序中执行另外一个外部程序 |
+| 代码              | 含义                                                                               |
+| ----------------- | ---------------------------------------------------------------------------------- |
+| #include<stido.h> | 包含stdio.h这个头文件                                                              |
+| main()函数        | 主函数，有且只有一个，是C语言程序的入口，程序是从main函数开始执行，                |
+| {}                | 代码块，一个代码块内部可以有一条或者多条语句，每句以分号结尾                       |
+| //     /**/       | 行注释与块注释，编译器忽视的内容，用于解释说明代码内容                             |
+| printf函数        | C语言库函数，功能是向标准输出设备输出一个字符串                                    |
+| \n                | 回车换行                                                                           |
+| return语句        | 代表函数执行完毕，返回return代表函数的终止，0代表程序执行成功， -1代表程序执行失败 |
+| system函数        | 在已经运行的程序中执行另外一个外部程序                                             |
 
 
 
 
-## 6. 编译过程
+## 6.编译过程
 
 
 ### 6.1 编译步骤
@@ -175,16 +120,12 @@ C代码编译成可执行程序经过4步：
 
 
 
-1. **预处理**：宏定义展开、头文件展开、条件编译等，同时将代码中的注释删除，这里并不会检查语法
-2. **编译**：检查语法，将预处理后文件编译生成汇编文件
-3. **汇编**：将汇编文件生成目标文件(二进制文件)
-4. **链接**：C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去  
-![](file:///C:\Users\Administrator\AppData\Local\Temp\ksohtml12536\wps27.jpg)
-
-
+1.**预处理**：宏定义展开、头文件展开、条件编译等，同时将代码中的注释删除，这里并不会检查语法
+2.**编译**：检查语法，将预处理后文件编译生成汇编文件
+3.**汇编**：将汇编文件生成目标文件(二进制文件)
+4.**链接**：C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去  
 
 ### 6.2 编译指令
-
 
 **GCC命令**  
 预处理：gcc -E hello.c -o hello.i  
@@ -193,33 +134,27 @@ C代码编译成可执行程序经过4步：
 链  接：gcc hello.o -o hello  
 一步编译：gcc hello.c -o hello
 
-| 选项 | 含义 |
-| --- | --- |
+| 选项    | 含义                       |
+| ------- | -------------------------- |
 | -u file | 指定生成的输出文件名为file |
-| -E | 只进行预处理 |
-| -S | 只进行预处理和编译 |
-| -c | 只进行预处理、编译和汇编 |
+| -E      | 只进行预处理               |
+| -S      | 只进行预处理和编译         |
+| -c      | 只进行预处理、编译和汇编   |
 
 
-| 文件后缀 | 含义 |
-| --- | --- |
-| .c | C 语言文件 |
-| .i | 预处理后的 C 语言文件 |
-| .s | 编译后的汇编文件 |
-| .o | 编译后的目标文件 |
-
-
-
+| 文件后缀 | 含义                  |
+| -------- | --------------------- |
+| .c       | C 语言文件            |
+| .i       | 预处理后的 C 语言文件 |
+| .s       | 编译后的汇编文件      |
+| .o       | 编译后的目标文件      |
 
 # 二、数据类型
 
 
-### 1. 标识符
-
+### 1.标识符
 
 **标识符**：程序员在程序中给函数、变量等起名字就是标识符
-
-
 
 + 只能由字母(a~z、 A~Z)、数字、下划线组成
 + 不能包含除下划线以外的其它特殊字符串
@@ -227,45 +162,27 @@ C代码编译成可执行程序经过4步：
 + 不能是C语言中的关键字
 + 严格区分大小写
 
-
-
-### 2. 关键字
-
+### 2.关键字
 
 **关键字**：指一些被C语言赋予了特殊含义的单词
-
-
 
 + 全部都是小写
 + 在开发工具中会显示特殊颜色
 + 不能用作变量名、函数名等
 
-
-
-![](file:///C:\Users\Administrator\AppData\Local\Temp\ksohtml10936\wps1.jpg)
-
-
-
-## 3. 数据类型
-
+## 3.数据类型
 
 **构造类型**：使用基本类型或已构造好的数据类型，进行添加，设计，构造出新的数据类型
 
-
-
 **指针类型**：值为内存地址
 
-
-
 **空类型**：关键字void，对函数的返回和参数限定
-
-
 
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306300914163.png)
 
 
 
-## 4. 常量
+## 4.常量
 
 
 **常量**：值在程序运行过程中不可改变的量，分为数值型常量、字符型常量、符号常量
@@ -277,23 +194,18 @@ C代码编译成可执行程序经过4步：
 
 **整型常量**：直接使用的整型常数，分为长整型、短整型、符号整型和无符号整形
 
-| 整型常量 | 所需类型 |
-| --- | --- |
-| 10 | 代表int类型 |
-| 10l, 10L | 代表long类型 |
-| 10ll, 10LL | 代表long long类型 |
-| 10u, 10U | 代表unsigned int类型 |
-| 10ul, 10UL | 代表unsigned long类型 |
+| 整型常量     | 所需类型                   |
+| ------------ | -------------------------- |
+| 10           | 代表int类型                |
+| 10l, 10L     | 代表long类型               |
+| 10ll, 10LL   | 代表long long类型          |
+| 10u, 10U     | 代表unsigned int类型       |
+| 10ul, 10UL   | 代表unsigned long类型      |
 | 10ull, 10ULL | 代表unsigned long long类型 |
-
-
-
 
 八进制：以0开头，包含数字0~7  
 十进制：无前缀，包含数字0~9  
 十六进制：以0x开头，包含数字0<sub>9和字母a</sub>f（不区分大小写）
-
-
 
 ### 4.2 浮点型常量
 
@@ -316,7 +228,7 @@ C代码编译成可执行程序经过4步：
 
 
 
-```plain
+```
 SciNum = 123.45            //科学计数法 
 SciNum = 1.2345e2          //指数方式
 FloatNum = 1.2345e2F       //单精度
@@ -369,7 +281,7 @@ DoubleNum = 1234.5e2       //双精度
 
 
 
-```plain
+```
 #include<stdio.h>
 #define Pai 3.14
 int main()
@@ -390,7 +302,7 @@ int main()
 
 
 
-## 5. 变量
+## 5.变量
 
 
 ### 5.1 整型变量
@@ -398,19 +310,19 @@ int main()
 
 **整型变量**：存储整型数值的变量
 
-| 名称 | 数据类型 | 占用空间 | 取值范围 |
-| --- | --- | --- | --- |
-| 有符号短整型 | short | 2Byte | -32768~32767 |
-| 有符号基本整型 | int | 4Byte | -2147483648~2147483647 |
-| 有符号长整型 | long | 4Byte | -2147483648~2147483647 |
-| 有符号短整型 | unsigned short | 2Byte | 0~65535 |
-| 无符号基本整型 | unsigned int | 4Byte | 0~4294967295 |
-| 无符号长整型 | unsigned long | 4Byte | 0~4294967295 |
+| 名称           | 数据类型       | 占用空间 | 取值范围               |
+| -------------- | -------------- | -------- | ---------------------- |
+| 有符号短整型   | short          | 2Byte    | -32768~32767           |
+| 有符号基本整型 | int            | 4Byte    | -2147483648~2147483647 |
+| 有符号长整型   | long           | 4Byte    | -2147483648~2147483647 |
+| 有符号短整型   | unsigned short | 2Byte    | 0~65535                |
+| 无符号基本整型 | unsigned int   | 4Byte    | 0~4294967295           |
+| 无符号长整型   | unsigned long  | 4Byte    | 0~4294967295           |
 
 
 
 
-```plain
+```
 int Num1 = 1;                 //定义有符号基本整型
 unsigned Num2 = 2;            //定义无符号基本整型
 short Num3 = 3;               //定义有符号短整型
@@ -426,16 +338,16 @@ unsigned long Num6 = 6;       //定义无符号长整型
 
 **浮点型变量**：存储浮点型数值的变量
 
-| 名称 | 数据类型 | 占用空间 | 取值范围 |
-| --- | --- | --- | --- |
-| 单精度类型 | float | 4Byte | |
-| 双精度类型 | double | 8Byte | |
-| 长双精度类型 | long double | 8Byte | |
+| 名称         | 数据类型    | 占用空间 | 取值范围 |
+| ------------ | ----------- | -------- | -------- |
+| 单精度类型   | float       | 4Byte    |          |
+| 双精度类型   | double      | 8Byte    |          |
+| 长双精度类型 | long double | 8Byte    |          |
 
 
 
 
-```plain
+```
 float Num1 = 1.23f;           
 double Num2 = 1.23;
 long double Num3 = 1.23;
@@ -450,7 +362,7 @@ long double Num3 = 1.23;
 
 
 
-```plain
+```
 char a1='a'      
 char a2=97;
 ```
@@ -461,7 +373,7 @@ char a2=97;
 
 
 
-## 6. 变量的存储类别
+## 6.变量的存储类别
 
 
 ### 6.1 静态存储与动态存储
@@ -479,7 +391,7 @@ char a2=97;
 
 
 
-```plain
+```
 #include<stdio.h>
 void AddOne()
 {
@@ -510,7 +422,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 void AddOne()
 {
@@ -541,7 +453,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -565,7 +477,7 @@ int main()
 
 
 
-```plain
+```
 //文件1
 #include<stdio.h>
 int main()
@@ -578,7 +490,7 @@ int main()
 
 
 
-```plain
+```
 //文件2
 #include<stdio.h>
 int i = 100;
@@ -590,7 +502,7 @@ int i = 100;
 
 
 
-## 7. 混合运算
+## 7.混合运算
 
 
 不同类型之间进行混合运算，要先转换为同一类型
@@ -601,7 +513,7 @@ int i = 100;
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -623,14 +535,14 @@ int main()
 # 三、运算符与表达式
 
 
-## 1. 表达式
+## 1.表达式
 
 
 表达式由操作符和操作数组成，表达式只返回结果值
 
 
 
-## 2. 赋值运算符（=）
+## 2.赋值运算符（=）
 
 
 **赋值表达式**  
@@ -647,7 +559,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -664,7 +576,7 @@ int main()
 
 
 
-## 3. 算术运算符
+## 3.算术运算符
 
 
 **分类**
@@ -677,7 +589,7 @@ int main()
 
 
 
-```plain
+```
 //华氏度转摄氏度
 #include<stdio.h>
 int main()
@@ -710,7 +622,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -737,20 +649,20 @@ int main()
 
 
 
-## 4. 关系运算符
-| 符号 | 功能 |
-| --- | --- |
-| > | 大于 |
-| < | 小于 |
-| >= | 大于等于 |
-| <= | 小于等于 |
-| == | 等于 |
-| != | 不等于 |
+## 4.关系运算符
+| 符号 | 功能     |
+| ---- | -------- |
+| >    | 大于     |
+| <    | 小于     |
+| >=   | 大于等于 |
+| <=   | 小于等于 |
+| ==   | 等于     |
+| !=   | 不等于   |
 
 
 
 
-```plain
+```
 //比较成绩大小
 #include<stdio.h>
 int main() 
@@ -785,17 +697,17 @@ int main()
 
 
 
-## 5. 逻辑运算符
-| 符号 | 功能 |
-| --- | --- |
-| && | 逻辑与 |
-| || | 逻辑或 |
-| ! | 逻辑非 |
+## 5.逻辑运算符
+| 符号 | 功能   |
+| ---- | ------ |
+| &&   | 逻辑与 |
+|      |        |  | 逻辑或 |
+| !    | 逻辑非 |
 
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -814,37 +726,37 @@ int main()
 
 
 
-## 6. 位逻辑运算符
+## 6.位逻辑运算符
 
 
 **位逻辑运算符**可以实现位的设置、清零、取反、取补操作  
 位逻辑运算符一般用作开关的标志
 
-| 符号 | 功能 |
-| --- | --- |
-| & | 位逻辑与 |
-| | | 位逻辑或 |
-| ^ | 位逻辑非 |
-| ~ | 取补 |
+| 符号 | 功能     |
+| ---- | -------- |
+| &    | 位逻辑与 |
+|      |          | 位逻辑或 |
+| ^    | 位逻辑非 |
+| ~    | 取补     |
 
 
 
 
-## 7. 逗号运算符（,）
+## 7.逗号运算符（,）
 
 
 逗号将多个表达式分隔开来
 
 
 
-## 8. 复合赋值运算符
+## 8.复合赋值运算符
 
 
 复合运算符是C语言独有的，是一种缩写形式
 
 
 
-```plain
+```
 Value = Value +3;        //常规写法
 Value += 3;              //缩写形式
 ```
@@ -858,7 +770,7 @@ Value += 3;              //缩写形式
 # 四、程序结构
 
 
-## 1. 输入/输出函数
+## 1.输入/输出函数
 
 
 ### 1.1 字符输出（putchar）
@@ -872,7 +784,7 @@ Value += 3;              //缩写形式
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -907,7 +819,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -938,7 +850,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -966,7 +878,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1005,7 +917,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1059,7 +971,7 @@ int main()
 ### 1.7 实例
 
 
-```plain
+```
 //计算圆的面积
 #include<stdio.h>
 int main()
@@ -1080,7 +992,7 @@ int main()
 
 
 
-```plain
+```
 //大写字母转小写字母
 #include<stdio.h>
 int main()
@@ -1101,7 +1013,7 @@ int main()
 
 
 
-## 2. if语句
+## 2.if语句
 
 
 **if**：通过对表达式进行判断，根据结果决定是否进行相应操作
@@ -1116,14 +1028,14 @@ int main()
 
 
 
-## 3. if ... else语句
+## 3.if ...else语句
 
 
 **if...else**：可以在条件为假时，执行另一段代码
 
 
 
-```plain
+```
 if(表达式)
 	语句1;
 else
@@ -1141,10 +1053,10 @@ else
 
 
 
-## 4. else if语句
+## 4.else if语句
 
 
-```plain
+```
 if(表达式1) 语句1
 else if(表达式2) 语句2
 else if(表达式3) 语句3
@@ -1161,7 +1073,7 @@ else 语句4
 
 
 
-```plain
+```
 if(a>b)
 	{max=a;}
 else(a<b)
@@ -1175,7 +1087,7 @@ else(a<b)
 
 
 
-```plain
+```
 //计算欠款
 #include<stdio.h>
 int main()
@@ -1201,14 +1113,14 @@ int main()
 
 
 
-## 5. switch语句
+## 5.switch语句
 
 
 **switch**：多分支选择语句
 
 
 
-```plain
+```
 switch(表达式)
 {
 	case 情况1;
@@ -1230,7 +1142,7 @@ switch(表达式)
 
 
 
-```plain
+```
 //输出分数段
 #include<stdio.h>
 int main()
@@ -1267,7 +1179,7 @@ int main()
 
 
 
-## 6. while语句
+## 6.while语句
 
 
 **while**：满足条件则循环执行语句，直到不满足条件时则退出循环
@@ -1282,7 +1194,7 @@ int main()
 
 
 
-```plain
+```
 //从1加到100
 #include<stdio.h>
 int main()
@@ -1305,14 +1217,14 @@ int main()
 
 
 
-## 7. do...while语句
+## 7./do while语句
 
 
 **do...while**：无论是否满足条件，先执行一次，后面同while
 
 
 
-```plain
+```
 do
 	循环语句
 while(表达式)；
@@ -1324,7 +1236,7 @@ while(表达式)；
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1340,13 +1252,9 @@ int main()
 }
 ```
 
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021034922.png)
 
-
-
-## 8. for语句
+## 8.for语句
 
 
 `for(表达式1;表达式2;表达式3;)`
@@ -1357,7 +1265,7 @@ int main()
 
 
 
-```plain
+```
 //显示随机数
 #include<stdio.h>
 #include<stdlib.h>
@@ -1379,7 +1287,7 @@ int main()
 
 
 
-## 9. goto语句
+## 9.goto语句
 
 
 **goto**：无条件转移语句，使程序立即跳转到函数内任意一条可执行语句
@@ -1390,7 +1298,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1423,14 +1331,14 @@ int main()
 
 
 
-## 10. break语句
+## 10.break语句
 
 
 **break**：强制终止并跳出循环；
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1454,14 +1362,14 @@ int main()
 
 
 
-## 11. continue语句
+## 11.continue语句
 
 
 **conuntie**：跳过尚未执行的部分，直接进行下一次循环
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1488,7 +1396,7 @@ int main()
 # 五、数组
 
 
-## 1. 一维数组
+## 1.一维数组
 
 
 **一维数组**：存储一组相同类型的变量
@@ -1510,7 +1418,7 @@ int main()
 
 
 
-```plain
+```
 //反向输出数组 
 #include<stdio.h>
 int main()
@@ -1552,13 +1460,13 @@ int main()
 
 
 
-1. 一一赋值，有几个数赋几个值
-2. 一部分赋值，未赋值为0
-3. 不指定数组长度赋值
+1.一一赋值，有几个数赋几个值
+2.一部分赋值，未赋值为0
+3.不指定数组长度赋值
 
 
 
-```plain
+```
 int a[5]={1,2,3,4,5};
 int a[5]={1,2,3};
 int a[]={1,2,3,4,5}
@@ -1570,7 +1478,7 @@ int a[]={1,2,3,4,5}
 
 
 
-```plain
+```
 //数组保存姓名
 #include<stdio.h>
 int main()
@@ -1594,7 +1502,7 @@ int main()
 
 
 
-## 2. 二维数组
+## 2.二维数组
 
 
 **二维数组**：由行和列组成的两个一维数组
@@ -1608,7 +1516,6 @@ int main()
 
 > 先放行，再放列  
 下标可以是整型常量或整型表达式
->
 
 
 
@@ -1621,15 +1528,15 @@ int main()
 
 
 
-1. 一一赋值
-2. 省略行下标，不能省略列下标
-3. 分组分配
-4. 部分分配
-5. 对元素赋值
+1.一一赋值
+2.省略行下标，不能省略列下标
+3.分组分配
+4.部分分配
+5.对元素赋值
 
 
 
-```plain
+```
 int a[2][3]={1,2,3,4,5,6};
 int a[][3]={1,2,3,4,5,6};
 int a[2][3]={{1,2,3},{4,5,6}};
@@ -1643,7 +1550,7 @@ int a[2][3];a[0][0]=1;a[0][1]=2;
 
 
 
-```plain
+```
 //输出最值并行列互换
 #include<stdio.h>
 int main()
@@ -1732,7 +1639,7 @@ int main()
 
 
 
-```plain
+```
 //求对角元素之和 
 #include<stdio.h>
 int main()
@@ -1768,7 +1675,7 @@ int main()
 
 
 
-## 3. 字符数组
+## 3.字符数组
 
 
 **字符数组**：数据元素为字符的数组
@@ -1784,13 +1691,13 @@ int main()
 
 
 
-1. 一一对应
-2. 省略数组长度
-3. 利用字符串
+1.一一对应
+2.省略数组长度
+3.利用字符串
 
 
 
-```plain
+```
 char a[5]={'H','e','l','l','o'};
 char a[]={'H','e','l','l','o'};
 char a[5]={"Hello"};
@@ -1804,7 +1711,7 @@ char a[5]={"Hello"};
 
 
 
-```plain
+```
 //计算单词个数 
 #include<stdio.h>
 int main()
@@ -1843,7 +1750,7 @@ int main()
 
 
 
-## 4. 多维数组
+## 4.多维数组
 
 
 **多维数组**：与二维数组相同，不过下标更多
@@ -1854,7 +1761,7 @@ int main()
 
 
 
-## 5. 排序算法
+## 5.排序算法
 
 
 ### 5.1 选择排序法
@@ -1864,7 +1771,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1916,7 +1823,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -1964,7 +1871,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -2013,7 +1920,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -2055,7 +1962,7 @@ int main()
 ### 5.5 折半排序法
 
 
-```plain
+```
 #include<stdio.h>
 
 void CelerityRun(int left,int right,int array[]);
@@ -2115,7 +2022,7 @@ void CelerityRun(int left,int right,int array[])
 
 
 
-## 6. 字符串处理
+## 6.字符串处理
 
 
 ### 6.1 字符串复制（strcpy）
@@ -2130,11 +2037,10 @@ void CelerityRun(int left,int right,int array[])
 
 
 > 不能用赋值语句直接赋值
->
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -2167,7 +2073,7 @@ int main()
 
 
 
-```plain
+```
 int main()
 {
 	char a[30],b[30];
@@ -2205,7 +2111,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -2274,7 +2180,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -2329,7 +2235,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 #include<string.h>
 int main()
@@ -2358,10 +2264,10 @@ int main()
 
 
 
-## 7. 应用
+## 7.应用
 
 
-```plain
+```
 //反转字符串 
 #include<stdio.h>
 int main()
@@ -2386,7 +2292,7 @@ int main()
 
 
 
-```plain
+```
 //输出系统时间和日期 
 #include<stdio.h>
 #include<time.h>
@@ -2429,7 +2335,7 @@ int main()
 
 
 
-```plain
+```
 //字符串加密、解密 
 #include<stdio.h>
 #include<string.h>
@@ -2491,16 +2397,16 @@ int main()
 # 六、函数
 
 
-## 1. 函数概述
+## 1.函数概述
 
 
-1. 函数是C语言的基本单元，包含可执行代码
-2. 主函数可以调用其他函数，其他函数可以相互调用
-3. 函数可以有参数和返回值
+1.函数是C语言的基本单元，包含可执行代码
+2.主函数可以调用其他函数，其他函数可以相互调用
+3.函数可以有参数和返回值
 
 
 
-## 2. 函数定义
+## 2.函数定义
 
 
 **函数定义**：让编译器知道函数功能，包括定义函数头和函数体
@@ -2523,7 +2429,7 @@ int main()
 
 
 
-```plain
+```
 int AddTwoNumber(int Num1,int Num2)
 {
 	int result;
@@ -2540,14 +2446,14 @@ int AddTwoNumber(int Num1,int Num2)
 
 
 
-## 3. 返回语句
+## 3.返回语句
 
 
 **返回语句**：从所在函数中退出，回到调用程序中去，或者将函数值赋给调用的表达式
 
 
 
-```plain
+```
 //从函数返回
 #include<stdio.h>
 int Function();
@@ -2570,7 +2476,7 @@ int Function()
 
 
 
-```plain
+```
 //返回函数值 
 #include<stdio.h>
 int Minus(int Number1,int Number2)
@@ -2594,7 +2500,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 char ShowChar();
 int main()
@@ -2619,7 +2525,7 @@ char ShowChar()
 
 
 
-## 4. 函数参数
+## 4.函数参数
 
 
 ### 4.1 形参与实参
@@ -2633,7 +2539,7 @@ char ShowChar()
 
 
 
-```plain
+```
 #include<stdio.h>
 void DrinkMilk(char *Bottle);
 int main()
@@ -2665,7 +2571,7 @@ void DrinkMilk(char *Bottle)
 
 
 
-```plain
+```
 #include<stdio.h>
 void ShowMember(int Member);
 int main()
@@ -2695,7 +2601,7 @@ void ShowMember(int Member)
 
 
 
-```plain
+```
 #include<stdio.h>
 void Evalute(int b[10]);
 void Display(int b[10]);
@@ -2733,7 +2639,7 @@ void Evalute(int b[10])
 ### 4.3 指针作参数
 
 
-```plain
+```
 #include<stdio.h>
 void Evalute(int *Point);
 void Display(int *Point);
@@ -2779,7 +2685,7 @@ void Evalute(int *Point)
 
 
 
-```plain
+```
 #include<stdio.h>
 int main(int argc,char *argv[])
 {
@@ -2794,7 +2700,7 @@ int main(int argc,char *argv[])
 
 
 
-## 5. 函数调用
+## 5.函数调用
 
 
 **调用方式**分为函数语句调用，函数表达式调用，函数参数调用
@@ -2808,7 +2714,7 @@ int main(int argc,char *argv[])
 
 
 
-```plain
+```
 #include<stdio.h>
 void Display()
 {
@@ -2834,7 +2740,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int AddTwoNum(int Num1,int Num2);
 int main()
@@ -2866,7 +2772,7 @@ int AddTwoNum(int Num1,int Num2)
 
 
 
-```plain
+```
 #include<stdio.h>
 int AddTwoNum(int Num1,int Num2);
 int main()
@@ -2898,7 +2804,7 @@ int AddTwoNum(int Num1,int Num2)
 
 
 
-```plain
+```
 #include<stdio.h>
 void First();
 void Second();
@@ -2939,7 +2845,7 @@ void Final()
 ### 5.5 递归调用
 
 
-```plain
+```
 #include<stdio.h>
 void Display(char **a);
 char* b[]=
@@ -2971,7 +2877,7 @@ void Display(char **a)
 
 
 
-## 6. 内部函数和外部函数
+## 6.内部函数和外部函数
 
 
 > 函数是c语言中最小的单位
@@ -2995,7 +2901,7 @@ void Display(char **a)
 
 
 
-```plain
+```
 #include<stdio.h>
 static char* Get(char* p)
 {
@@ -3027,7 +2933,7 @@ int main()
 
 
 
-```plain
+```
 //文件1
 #include<stdio.h>
 extern char* GetString(char* p);
@@ -3057,7 +2963,7 @@ extern void Show(char* p)
 
 
 
-## 7. 局部变量和全局变量
+## 7.局部变量和全局变量
 
 
 ### 7.1 局部变量
@@ -3067,7 +2973,7 @@ extern void Show(char* p)
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -3107,7 +3013,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int GlobalPrice = 100;
 void Price1();
@@ -3151,7 +3057,7 @@ void ChangePrice()
 
 
 
-## 8. 数学公式
+## 8.数学公式
 
 
 ### 8.1 绝对值
@@ -3163,7 +3069,7 @@ void ChangePrice()
 
 
 
-```plain
+```
 #include<stdio.h>
 #include<math.h>
 int main()
@@ -3208,7 +3114,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 #include<math.h>
 int main()
@@ -3253,7 +3159,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 #include<ctype.h>
 void Switch(char c);
@@ -3303,7 +3209,7 @@ void Switch(char c)
 # 七、指针
 
 
-## 1. 概念
+## 1.概念
 
 
 ### 1.1 地址、变量与指针
@@ -3340,7 +3246,7 @@ void Switch(char c)
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -3368,7 +3274,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 int main()
 {
@@ -3401,7 +3307,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 main()
 {
@@ -3422,14 +3328,14 @@ main()
 
 
 
-## 2. 数组与指针
+## 2.数组与指针
 
 
 **数组指针**：存储数组的首地址
 
 
 
-```plain
+```
 #include<stdio.h>
 main()
 {
@@ -3480,7 +3386,7 @@ main()
 
 
 
-```plain
+```
 #include<stdio.h>
 main()
 {
@@ -3511,7 +3417,7 @@ main()
 
 
 
-```plain
+```
 #include<stdio.h>
 main()
 {
@@ -3540,14 +3446,14 @@ main()
 
 
 
-## 3. 双重指针
+## 3.双重指针
 
 
 `类型标识符 **指针变量名`
 
 
 
-```plain
+```
 #include<stdio.h>
 main()
 {
@@ -3578,10 +3484,10 @@ main()
 
 
 
-## 4. 函数参数
+## 4.函数参数
 
 
-```plain
+```
 //交换地址 
 #include<stdio.h>
 void Swap(int *a,int *b)
@@ -3606,44 +3512,44 @@ int main()
 
 
 
-```plain
+```
 //嵌套调用
 ```
 
 
 
-```plain
+```
 //奇数之和
 ```
 
 
 
-```plain
+```
 //冒泡排序
 ```
 
 
 
-```plain
+```
 //字母顺序排序
 ```
 
 
 
-```plain
+```
 //数组元素求和
 ```
 
 
 
-## 5. 指针函数
+## 5.指针函数
 
 
 `类型名 *函数名（参数列表）*`
 
 
 
-```plain
+```
 #include<stdio.h>
 int per(int a,int b);
 void main()
@@ -3662,10 +3568,10 @@ int per(int a,int b)
 
 
 
-## 6. main参数
+## 6.main参数
 
 
-```plain
+```
 #include<stdio.h>
 main(int argc,char *argv[])
 {
@@ -3679,7 +3585,7 @@ main(int argc,char *argv[])
 # 八、结构体与共用体
 
 
-## 1. 结构体
+## 1.结构体
 
 
 ### 1.1 定义与声明
@@ -3693,7 +3599,7 @@ main(int argc,char *argv[])
 
 
 
-```plain
+```
 struct 结构体名
 {
 	成员列表;
@@ -3702,7 +3608,7 @@ struct 结构体名
 
 
 
-```plain
+```
 struct Product
 {
 	char Name[10];    //产品名称
@@ -3720,7 +3626,7 @@ struct Product
 
 
 
-```plain
+```
 struct 结构体名
 {
 	成员列表;
@@ -3729,7 +3635,7 @@ struct 结构体名
 
 
 
-```plain
+```
 struct Product
 {
 	char Name[10];    //产品名称
@@ -3747,7 +3653,7 @@ struct Product
 
 
 
-```plain
+```
 struct
 {
 	成员列表；
@@ -3756,7 +3662,7 @@ struct
 
 
 
-```plain
+```
 struct
 {
 	char Name[10];    //产品名称
@@ -3783,7 +3689,7 @@ struct
 
 
 
-```plain
+```
 product1.Name="Icebox";
 product2.Price="2000";
 ```
@@ -3796,7 +3702,7 @@ product2.Price="2000";
 
 
 
-```plain
+```
 #include<stdio.h>
 struct Product
 {
@@ -3837,7 +3743,7 @@ int main()
 ### 1.3 初始化
 
 
-```plain
+```
 #include<stdio.h>
 struct Student
 {
@@ -3858,13 +3764,13 @@ int main()
 
 
 
-## 2. 结构体数组
+## 2.结构体数组
 
 
 ### 2.1 定义
 
 
-```plain
+```
 struct 结构体名
 {
 	成员列表；
@@ -3873,7 +3779,7 @@ struct 结构体名
 
 
 
-```plain
+```
 struct Student
 {
 	char Name[10];
@@ -3888,7 +3794,7 @@ struct Student
 ### 2.2 初始化
 
 
-```plain
+```
 struct 结构体名
 {
 	成员列表；
@@ -3897,7 +3803,7 @@ struct 结构体名
 
 
 
-```plain
+```
 #include<stdio.h>
 struct Student
 {
@@ -3924,7 +3830,7 @@ int main()
 
 
 
-## 3. 结构体指针
+## 3.结构体指针
 
 
 ### 3.1 指向结构体变量
@@ -3956,7 +3862,7 @@ int main()
 
 
 
-```plain
+```
 #include<stdio.h>
 #include<string.h>
 struct Student
@@ -3983,7 +3889,7 @@ int main()
 ### 3.2 指向结构体数组
 
 
-```plain
+```
 #include<stdio.h>
 struct Student
 {
@@ -4019,7 +3925,7 @@ int main()
 #### 结构体变量
 
 
-```plain
+```
 #include<stdio.h>
 struct Student
 {
@@ -4038,12 +3944,10 @@ int main()
 }
 ```
 
-
-
 #### 指向结构体变量指针
 
 
-```plain
+```
 #include<stdio.h>
 struct Student
 {
@@ -4069,10 +3973,10 @@ int main()
 #### 结构体变量成员
 
 
-## 4. 包含结构的结构
+## 4.包含结构的结构
 
 
-```plain
+```
 #include<stdio.h>
 struct data
 {
@@ -4094,177 +3998,23 @@ int main()
 }
 ```
 
-
-
-## 5. 链表
-
+## 5.链表
 
 ### 5.1 概述
 
-
 链表必须利用指针实现
-
-
 
 ### 5.2 动态链表
 
-
 **malloc函数**：在内存中动态的分配一块内存空间
-
-
 
 `void *malloc(int size);`
 
-
-
 **calloc函数**：在内存中动态分配n个连续内存空间
-
-
 
 `void calloc(unsigned n,unsigned size);`
 
-
-
 **free函数**：使用指针指向的内存区
 
-
-
 `void free(void *p);`
-
-
-
-### 5.3 输出链表
-
-
-## 6. 共用体
-
-
-## 7. 枚举类型
-
-
-# 九、
-
-
-# 十、
-
-
-# 总结
-
-
-## 1. 学语言
-
-
-**过、抄、仿、改、调、看、练、创、悟**
-
-
-
-**1、过：**
-
-
-
-学习一门新的语言，第一步就是把它所涉及的基础知识大体过一点，不求深解，只求了解——第一遍：无需了解太过深入的理论，大体知道这门语言是什么样的，主要面向哪些场合，一些基本的语法格式是什么样的就可以了。
-
-
-
-**2、抄代码：**
-
-
-
-刚开始写代码，没有多少人一上来就能立刻自己写一个很完善很强大的代码，甚至连基本的语法都会写错，这时候抄代码就很关键了，从书上抄，从例子里抄，边抄边想，边想边回忆语法。
-
-
-
-**3、模仿改：**
-
-
-
-自己会抄写一些简单的代码，熟悉了一遍此语言的简单语法后，但还不太清楚怎样下手写一个完整的代码模块，所以这一步要仿写了，仿照给出的代码写一个属于自己的代码
-
-
-
-**4、勤调试：**
-
-
-
-没有人能一下子写出完全正确的代码，自己试着写一些代码，通过不断调试来验证自己的一些想法，继续思考，再次验证，来回折腾。
-
-
-
-熟悉一些基本的调试工具以及调试方法。
-
-
-
-**5、看n遍：**
-
-
-
-出错或遇到问题时，将代码从头看到尾，看了一遍又一遍，直到快全部记住时，总能找出问题原因，相信方法总会比问题多
-
-
-
-**6、练**
-
-
-
-重复2-5步三遍以上，不解释。
-
-
-
-**7、创新**
-
-
-
-拿出一个完全没有写过的代码，根据要求，一步步的写出来。
-
-
-
-如果写不出来，或者中间一堆错误，请参考第六步。
-
-
-
-**8、悟：**
-
-
-
-主动找到写代码的感觉和成就感，并保持下去，世界上最难的语言就掌握了，将成为你软件生涯永远的工具。
-
-
-
-## 2. 读程序
-
-
-**流程、每个语句的功能、试数**
-
-
-
-1. 尝试自己去编程解决它
-
-
-
-但要意识到大部分人都是自己无法解决的，如果解决不了，这时不要气馁，如果十五分钟还想不出来，此时我建议您就可以看答案了。
-
-
-
-2. 如果解决不了，就看答案
-
-
-
-关键是把答案看懂，这个要花很大的精力，也是我们学习的重点。
-
-
-
-看懂一个程序要分三步：流程、每个语句的功能、试数。
-
-
-
-3. 看懂之后尝试自己去修改程序，并且知道修改之后程序的不同输出结果的含义，不建议看懂程序之后就立即自己敲程序。
-
-
-
-4. 照着答案去敲，调试错误。
-
-
-
-5.  不看答案，自己独立把答案敲出来。 
-6.  如果程序实在无法彻底理解，就把它背会，无法彻底理解的程序很少很少（几乎没有）。 
 

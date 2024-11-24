@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5">
+        <p>你好啊</p>
+    </div>
+</body>
+
+<style>
+   .box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 20px;
+        float: left;
+    }
+    /* 线性渐变 */
+    .box1 {
+        background:linear-gradient(red,yellow,green);        
+    }
+    /* 渐变方向 */
+    .box2 {
+        background:linear-gradient(to right top,red,yellow,green);        
+    }
+    /* 渐变角度 */
+    .box3 {
+        background:linear-gradient(60deg,red,yellow,green);        
+    }
+    /* 渐变长度 */
+    .box4 {
+        background:linear-gradient(red 50px,yellow 100px,green 150px);        
+    }
+    /* 渐变字 */
+    .box5 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image:linear-gradient(to right top,red,yellow,green);        
+    }
+
+    .box5 p{
+        margin-top:65px;
+    }
+
+</style>
+</html>

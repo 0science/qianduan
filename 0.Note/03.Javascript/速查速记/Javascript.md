@@ -370,3 +370,7 @@ setTimeout(function(){},1000)
 ## jQuery
 
 
+## 参考资料
+
+[1] [仿王者荣耀首页](https://blog.csdn.net/html_wangye/article/details/126169574)
+

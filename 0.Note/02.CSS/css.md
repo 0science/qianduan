@@ -284,5 +284,29 @@
   white-space: nowrap;
 ```
 
-### 渐变色
+## 渐变色
 
+### 线性渐变
+
+
+### 径向渐变
+
+
+### 重复渐变
+
+## 兼容性
+
+| 浏览器                      | 内核         | 私有前缀   |
+| --------------------------- | ------------ | ---------- |
+| **Google Chrome**           | Blink        | `-webkit-` |
+| **Mozilla Firefox**         | Gecko        | `-moz-`    |
+| **Safari**                  | WebKit       | `-webkit-` |
+| **Microsoft Edge** (旧版本) | EdgeHTML     | `-ms-`     |
+| **Microsoft Edge** (新版本) | Blink        | `-webkit-` |
+| **Internet Explorer**       | Trident      | `-ms-`     |
+| **Opera**                   | Blink        | `-webkit-` |
+| **Samsung Internet**        | WebKit       | `-webkit-` |
+| **UC Browser**              | WebKit/Blink | `-webkit-` |
+| **QQ Browser**              | WebKit/Blink | `-webkit-` |
+| **360 Browser**             | WebKit/Blink | `-webkit-` |
+| **Maxthon**                 | WebKit/Blick | `-webkit-` |

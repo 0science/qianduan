@@ -1,9 +1,6 @@
 [TOC]
-
 # 一、概述
-
 ## 1.程序语言
-
 | 程序语言 | 特点                                                 | 举例                      |
 | -------- | ---------------------------------------------------- | ------------------------- |
 | 机器语言 | 低级语言，0和1组成的二进制代码，计算机直接识别。     | 如：`10110000 01100001`   |
@@ -15,7 +12,6 @@
 | 代码量小   | 代码实现周期长 |
 | 运行速度快 | 平台库依赖较多 |
 | 功能丰富   |                |
-
 ## 3.应用
 + 嵌入式
 + web开发
@@ -30,72 +26,9 @@
 + 虚拟技术
 + 数据库
 + 编译器
-
-
-
 ## 4.集成开发环境
-
-
 集成开发环境（IDE，Integrated Development Environment ）是用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面工具。集成了代码编写功能、分析功能、编译功能、调试功能等一体化的开发软件服务套。所有具备这一特性的软件或者软件套（组）都可以叫集成开发环境。
-
-## 5.第一个C程序
-
-
-### 5.1 hello.c
-
-
-```
-#include<stdio.h>            /*包含头文件stdio.h*/
-int main()                   /*主函数main*/              
-{
-	printf("Hello World!");  /*显示输出字符串*/
-	return 0;                /*程序返回0*/     
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306291339100.png)
-
-
-
-### 5.2 calculate.c
-
-
-```
-#include <stdio.h>                         /*包含头文件stdio.h*/
-#define Height 10                          /*定义常量Height*/
-int calculate(int Long, int Width);        /*用户自定义函数calculate声明*/
-int main()                                 /*主函数main*/
-{
-    int m_Long;                            /*定义整型变量m_Long,表示长度*/
-    int m_Width;                           /*定义整型变量m Width,表示宽度*/
-    int result;                            /*定义整型变量result,表示体积*/
-    printf("长方形的高度为：%d\n", Height); /*产显示提示*/
-    printf("请输入长度\n");                 /*显示提示*/
-    scanf("%d", &m_Long);                  /*输入长方体的长度*/
-    printf("请输入宽度\n");                 /*显示提示*/
-    scanf("%d", &m_Width);                 /*输入长方体的宽度*/
-    result = calculate(m_Long, m_Width);   /*调用calculate函数，计算体积*/
-    printf("长方体的体积是：");             /*显示提示*/
-    printf("%d\n", result);                /*输出体积大小*/
-    return 0;                              /*程序返回0*/
-}
-int calculate(int Long, int Width)         /*自定义计算体积函数calculate*/
-{
-    int result = Long * Width * Height;    /*计算体积*/
-    return result;                         /*将计算的体积结果返回*/
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306291423261.png)  
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306291434563.png)
-
-
-
-### 5.3 代码分析
+## 5.代码分析
 | 代码              | 含义                                                                               |
 | ----------------- | ---------------------------------------------------------------------------------- |
 | #include<stido.h> | 包含stdio.h这个头文件                                                              |
@@ -106,94 +39,54 @@ int calculate(int Long, int Width)         /*自定义计算体积函数calculat
 | \n                | 回车换行                                                                           |
 | return语句        | 代表函数执行完毕，返回return代表函数的终止，0代表程序执行成功， -1代表程序执行失败 |
 | system函数        | 在已经运行的程序中执行另外一个外部程序                                             |
-
-
-
-
 ## 6.编译过程
-
-
 ### 6.1 编译步骤
-
-
 C代码编译成可执行程序经过4步：
-
-
-
 1.**预处理**：宏定义展开、头文件展开、条件编译等，同时将代码中的注释删除，这里并不会检查语法
 2.**编译**：检查语法，将预处理后文件编译生成汇编文件
 3.**汇编**：将汇编文件生成目标文件(二进制文件)
 4.**链接**：C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去  
-
 ### 6.2 编译指令
-
 **GCC命令**  
 预处理：gcc -E hello.c -o hello.i  
 编  译：gcc -S hello.i -o hello.s  
 汇  编：gcc -c hello.s -o hello.o  
 链  接：gcc hello.o -o hello  
 一步编译：gcc hello.c -o hello
-
-| 选项    | 含义                       |
-| ------- | -------------------------- |
-| -u file | 指定生成的输出文件名为file |
-| -E      | 只进行预处理               |
-| -S      | 只进行预处理和编译         |
-| -c      | 只进行预处理、编译和汇编   |
-
-
-| 文件后缀 | 含义                  |
-| -------- | --------------------- |
-| .c       | C 语言文件            |
-| .i       | 预处理后的 C 语言文件 |
-| .s       | 编译后的汇编文件      |
-| .o       | 编译后的目标文件      |
-
+| 选项     | 含义                       |
+| -------- | -------------------------- |
+| -u file  | 指定生成的输出文件名为file |
+| -E       | 只进行预处理               |
+| -S       | 只进行预处理和编译         |
+| -c       | 只进行预处理、编译和汇编   |
+| 文件后缀 | 含义                       |
+| -------- | ---------------------      |
+| .c       | C 语言文件                 |
+| .i       | 预处理后的 C 语言文件      |
+| .s       | 编译后的汇编文件           |
+| .o       | 编译后的目标文件           |
 # 二、数据类型
-
-
 ### 1.标识符
-
 **标识符**：程序员在程序中给函数、变量等起名字就是标识符
-
 + 只能由字母(a~z、 A~Z)、数字、下划线组成
 + 不能包含除下划线以外的其它特殊字符串
 + 不能以数字开头
 + 不能是C语言中的关键字
 + 严格区分大小写
-
 ### 2.关键字
-
 **关键字**：指一些被C语言赋予了特殊含义的单词
-
 + 全部都是小写
 + 在开发工具中会显示特殊颜色
 + 不能用作变量名、函数名等
-
 ## 3.数据类型
-
 **构造类型**：使用基本类型或已构造好的数据类型，进行添加，设计，构造出新的数据类型
-
 **指针类型**：值为内存地址
-
 **空类型**：关键字void，对函数的返回和参数限定
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306300914163.png)
-
-
-
 ## 4.常量
-
-
 **常量**：值在程序运行过程中不可改变的量，分为数值型常量、字符型常量、符号常量
-
-
-
 ### 4.1 整型常量
-
-
 **整型常量**：直接使用的整型常数，分为长整型、短整型、符号整型和无符号整形
-
 | 整型常量     | 所需类型                   |
 | ------------ | -------------------------- |
 | 10           | 代表int类型                |
@@ -202,32 +95,16 @@ C代码编译成可执行程序经过4步：
 | 10u, 10U     | 代表unsigned int类型       |
 | 10ul, 10UL   | 代表unsigned long类型      |
 | 10ull, 10ULL | 代表unsigned long long类型 |
-
 八进制：以0开头，包含数字0~7  
 十进制：无前缀，包含数字0~9  
 十六进制：以0x开头，包含数字0<sub>9和字母a</sub>f（不区分大小写）
-
 ### 4.2 浮点型常量
-
-
 **浮点型**：由整数部分和小数部分组成，分为单精度浮点数(F结尾)，双精度浮点数
-
-
-
 科学计数法：十进制小数方法
-
-
-
 指数方式：以幂的形式表示, 以字母e或字母E后跟一个10为底的幂数
-
-
-
 + 字母e或字母E后面的指数必须为整数
 + 字母e或字母E前后必须要有数字
 + 字母e或字母E前后不能有空格
-
-
-
 ```
 SciNum = 123.45            //科学计数法 
 SciNum = 1.2345e2          //指数方式
@@ -235,81 +112,20 @@ FloatNum = 1.2345e2F       //单精度
 LongDoubleNum =123.45e-1L  //长双精度   
 DoubleNum = 1234.5e2       //双精度
 ```
-
-
-
 > 后缀大小写通用
->
-
-
-
 ### 4.3 字符型常量
-
-
 字符型常量分为字符常量、字符串常量
-
-
-
 **字符常量**：单引号内加一个字符
-
-
-
 **字符串常量**：双引号内加多个字符
-
-
-
 > 系统会在字符串结尾加上\0，所以字符串长度会加1
->
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301447568.png)
-
-
-
 ### 4.4 转义字符
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301445634.png)
-
-
-
 ### 4.5 符号常量
-
-
 **符号常量**：用符号名代替固定的常量值
-
-
-
-```
-#include<stdio.h>
-#define Pai 3.14
-int main()
-{
-	double fRadius;
-	double fResult=0;
-	printf("请输入圆的半径：");
-	scanf("%lf",&fRadius);
-	fResult=fRadius*fRadius*Pai;
-	printf("圆的面积为：%lf\n",fResult);
-	return 0; 
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301500979.png)
-
-
-
 ## 5.变量
-
-
 ### 5.1 整型变量
-
-
 **整型变量**：存储整型数值的变量
-
 | 名称           | 数据类型       | 占用空间 | 取值范围               |
 | -------------- | -------------- | -------- | ---------------------- |
 | 有符号短整型   | short          | 2Byte    | -32768~32767           |
@@ -318,10 +134,6 @@ int main()
 | 有符号短整型   | unsigned short | 2Byte    | 0~65535                |
 | 无符号基本整型 | unsigned int   | 4Byte    | 0~4294967295           |
 | 无符号长整型   | unsigned long  | 4Byte    | 0~4294967295           |
-
-
-
-
 ```
 int Num1 = 1;                 //定义有符号基本整型
 unsigned Num2 = 2;            //定义无符号基本整型
@@ -330,153 +142,39 @@ unsigned short Num4 = 4;      //定义无符号短整型
 long Num5 = 5;                //定义有符号长整型
 unsigned long Num6 = 6;       //定义无符号长整型
 ```
-
-
-
 ### 5.2 浮点型变量
-
-
 **浮点型变量**：存储浮点型数值的变量
-
 | 名称         | 数据类型    | 占用空间 | 取值范围 |
 | ------------ | ----------- | -------- | -------- |
 | 单精度类型   | float       | 4Byte    |          |
 | 双精度类型   | double      | 8Byte    |          |
 | 长双精度类型 | long double | 8Byte    |          |
-
-
-
-
 ```
 float Num1 = 1.23f;           
 double Num2 = 1.23;
 long double Num3 = 1.23;
 ```
-
-
-
 ### 5.3 字符型变量
-
-
 **字符型变量**：将一个字符常量存储到一个字符变量中
-
-
-
 ```
 char a1='a'      
 char a2=97;
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301550896.png)
-
-
-
 ## 6.变量的存储类别
-
-
 ### 6.1 静态存储与动态存储
-
-
 **静态存储**：程序运行时为其分配固定的存储空间  
 **动态存储**：程序运行时根据需要动态分配空间
-
-
-
 ### 6.2 auto变量
-
-
 **auto**：动态变量，定义一个局部变量为自动
 
-
-
-```
-#include<stdio.h>
-void AddOne()
-{
-    auto int i = 1;
-    i = i+1;
-    printf("%d\n",i);
-}
-int main()
-{
-    printf("第一次调用：");
-    AddOne();
-    printf("第二次调用：");
-    AddOne();
-    return 0;
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301615232.png)
-
-
-
 ### 6.3 staticus变量
-
-
 **static**：静态变量
-
-
-
-```
-#include<stdio.h>
-void AddOne()
-{
-    static int i = 1;
-    i = i+1;
-    printf("%d\n",i);
-}
-int main()
-{
-    printf("第一次调用：");
-    AddOne();
-    printf("第二次调用：");
-    AddOne();
-    return 0;
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301639265.png)
-
-
-
 ### 6.4 register变量
-
-
 **register**：寄存器存储类变量，把局部变量指定存放在寄存器中，而不是内存中
 
-
-
-```
-#include<stdio.h>
-int main()
-{
-	register int i;
-	i=100;
-	printf("%d",i);
-	return 0;
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301653143.png)
-
-
-
 ### 6.5 extern变量
-
-
 **extern**：外部存储变量
-
-
-
 ```
 //文件1
 #include<stdio.h>
@@ -487,32 +185,15 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ```
 //文件2
 #include<stdio.h>
 int i = 100;
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301652346.png)
-
-
-
 ## 7.混合运算
-
-
 不同类型之间进行混合运算，要先转换为同一类型
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301657086.png)
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -525,103 +206,29 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301926190.png)
-
-
-
 # 三、运算符与表达式
-
-
 ## 1.表达式
-
-
 表达式由操作符和操作数组成，表达式只返回结果值
-
-
-
 ## 2.赋值运算符（=）
-
-
 **赋值表达式**  
 `类型 变量名 = 常数/表达式`
-
-
-
 > 数据大小超过数值类型的取值范围时会发生截断
 >
 
-
-
-**强制类型转换**
-
-
-
-```
-#include<stdio.h>
-int main()
-{
-	float i = 10.1f;
-	int j = (int)i;         //强制类型转换 
-	printf("%d",j);            
-	return 0;
-}
-```
-
-
-
-![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306301956847.png)
-
-
-
 ## 3.算术运算符
-
-
 **分类**
-
-
-
 算数运算符包括单目运算符、双目运算符  
 单目运算符包括正、负  
 双目运算符包括乘、除、取模、加、减
-
-
-
-```
-//华氏度转摄氏度
-#include<stdio.h>
-int main()
-{
-	int Celsius,Fahrenheit;
-	printf("请输入华氏度：");
-	scanf("%d",&Fahrenheit);
-	Celsius =5*(Fahrenheit-32)/9;
-	printf("摄氏度是：%d",Celsius);
-	return 0;
-}
 ```
 
-
-
+```
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202306302011487.png)
-
-
-
 **优先级**
-
-
-
 + 先乘除取余，后加减，括号优先
 + 优先级相同，从左到右依次计算
-
-
-
 **自增/自减运算符**
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -642,13 +249,7 @@ int main()
 	return 0; 
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307010913015.png)
-
-
-
 ## 4.关系运算符
 | 符号 | 功能     |
 | ---- | -------- |
@@ -658,10 +259,6 @@ int main()
 | <=   | 小于等于 |
 | ==   | 等于     |
 | !=   | 不等于   |
-
-
-
-
 ```
 //比较成绩大小
 #include<stdio.h>
@@ -690,23 +287,13 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307010929526.png)
-
-
-
 ## 5.逻辑运算符
 | 符号 | 功能   |
 | ---- | ------ |
 | &&   | 逻辑与 |
 |      |        |  | 逻辑或 |
 | !    | 逻辑非 |
-
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -719,71 +306,30 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307010957203.png)
-
-
-
 ## 6.位逻辑运算符
-
-
 **位逻辑运算符**可以实现位的设置、清零、取反、取补操作  
 位逻辑运算符一般用作开关的标志
-
 | 符号 | 功能     |
 | ---- | -------- |
 | &    | 位逻辑与 |
 |      |          | 位逻辑或 |
 | ^    | 位逻辑非 |
 | ~    | 取补     |
-
-
-
-
 ## 7.逗号运算符（,）
-
-
 逗号将多个表达式分隔开来
-
-
-
 ## 8.复合赋值运算符
-
-
 复合运算符是C语言独有的，是一种缩写形式
-
-
-
 ```
 Value = Value +3;        //常规写法
 Value += 3;              //缩写形式
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011012546.png)
-
-
-
 # 四、程序结构
-
-
 ## 1.输入/输出函数
-
-
 ### 1.1 字符输出（putchar）
-
-
 **putchar函数**：向显示设备输出一个字符
-
-
-
 `int putchar(int ch);`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -801,24 +347,10 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011128597.png)
-
-
-
 ### 1.2 字符输入（getchar）
-
-
 **getchar**：从输入设备中输入一个字符
-
-
-
 `int getchar()`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -832,24 +364,10 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011344105.png)
-
-
-
 ### 1.3 字符串输出（puts）
-
-
 **字符串输出**：输出一个字符串到屏幕上
-
-
-
 `int puts(char *str)`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -860,24 +378,10 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011355900.png)
-
-
-
 ### 1.4 字符串输入（gets）
-
-
 **字符串输入**：将读取的字符保存在形式参数中
-
-
-
 `gets()`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -888,35 +392,15 @@ int main()
 	return 0;           
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011402016.png)
-
-
-
 ### 1.5 格式输出函数（printf）
-
-
 **printf函数**：输出若干任意类型的数据  
 **格式控制**：将输出的数据转换为指定格式  
 **输出列表**：需要输出的数据
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011414309.png)
-
-
-
 > printf("%3.2f",num);   //保留三位数，两位是小数
 >
-
-
-
 `print(格式控制 输出列表)`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -929,48 +413,17 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011422797.png)
-
-
-
 **附加格式**
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011424875.png)
-
-
-
 > 字母l，整数m、n
 >
-
-
-
 ### 1.6 格式输入函数（scanf）
-
-
 **scanf函数**：接收输入的数据
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011429202.png)
-
-
-
 `scanf(格式控制 地址控制)`
-
-
-
 **附加格式**![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011432192.png)
-
-
-
 ### 1.7 实例
-
-
 ```
 //计算圆的面积
 #include<stdio.h>
@@ -985,13 +438,7 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011438685.png)
-
-
-
 ```
 //大写字母转小写字母
 #include<stdio.h>
@@ -1006,87 +453,39 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011443074.png)
-
-
-
 ## 2.if语句
-
-
 **if**：通过对表达式进行判断，根据结果决定是否进行相应操作
-
-
-
 `if(表达式) 语句`
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011506765.png)
-
-
-
 ## 3.if ...else语句
-
-
 **if...else**：可以在条件为假时，执行另一段代码
-
-
-
 ```
 if(表达式)
 	语句1;
 else
 	语句2；
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011527184.png)
-
-
-
 > esle语句必须跟在if语句后面
 >
-
-
-
 ## 4.else if语句
-
-
 ```
 if(表达式1) 语句1
 else if(表达式2) 语句2
 else if(表达式3) 语句3
 else 语句4
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011519163.png)
-
-
-
 **条件运算符**
-
-
-
 ```
 if(a>b)
 	{max=a;}
 else(a<b)
 	{max=b;}
 ```
-
-
-
 以上代码可以用？来简化  
 `max=(a>b)?a:b;`
-
-
-
 ```
 //计算欠款
 #include<stdio.h>
@@ -1106,20 +505,9 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011648375.png)
-
-
-
 ## 5.switch语句
-
-
 **switch**：多分支选择语句
-
-
-
 ```
 switch(表达式)
 {
@@ -1129,19 +517,10 @@ switch(表达式)
 	default:默认情况
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011650831.png)
-
-
-
 > case无匹配则执行defult，只能又有一个defult语句，每个case和defult后都要有break关键字跳出循环  
 3个分支用if...else，3个以上用switch
 >
-
-
-
 ```
 //输出分数段
 #include<stdio.h>
@@ -1172,28 +551,11 @@ int main()
 	 return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307011710626.png)
-
-
-
 ## 6.while语句
-
-
 **while**：满足条件则循环执行语句，直到不满足条件时则退出循环
-
-
-
 `while(表达式) 语句`
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307020941122.png)
-
-
-
 ```
 //从1加到100
 #include<stdio.h>
@@ -1210,32 +572,15 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021020668.png)
-
-
-
 ## 7./do while语句
-
-
 **do...while**：无论是否满足条件，先执行一次，后面同while
-
-
-
 ```
 do
 	循环语句
 while(表达式)；
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021026068.png)
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1251,20 +596,10 @@ int main()
 	return 0;
 }
 ```
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021034922.png)
-
 ## 8.for语句
-
-
 `for(表达式1;表达式2;表达式3;)`
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021036147.png)
-
-
-
 ```
 //显示随机数
 #include<stdio.h>
@@ -1280,24 +615,10 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021052454.png)
-
-
-
 ## 9.goto语句
-
-
 **goto**：无条件转移语句，使程序立即跳转到函数内任意一条可执行语句
-
-
-
 `goto 标识符`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1311,7 +632,6 @@ int main()
 			printf("输入一个数字进行选择：");
 			scanf("%d",&Select);
 			printf("（按0退出，99进入下一步）\n");
-			
 			if(Select==0)
 			{
 				goto exit;
@@ -1324,20 +644,9 @@ int main()
 		return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021344811.png)
-
-
-
 ## 10.break语句
-
-
 **break**：强制终止并跳出循环；
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1355,20 +664,9 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021349101.png)
-
-
-
 ## 11.continue语句
-
-
 **conuntie**：跳过尚未执行的部分，直接进行下一次循环
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1386,38 +684,16 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021411236.png)
-
-
-
 # 五、数组
-
-
 ## 1.一维数组
-
-
 **一维数组**：存储一组相同类型的变量
-
-
-
 **数组定义**  
 `类型说明符 数组标识符[常量表达式]`
-
-
-
 **数组引用**  
 `数组标识符[下标]`
-
-
-
 > 数组下标从0开始
 >
-
-
-
 ```
 //反向输出数组 
 #include<stdio.h>
@@ -1449,35 +725,17 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021557711.png)
-
-
-
 **初始化**
-
-
-
 1.一一赋值，有几个数赋几个值
 2.一部分赋值，未赋值为0
 3.不指定数组长度赋值
-
-
-
 ```
 int a[5]={1,2,3,4,5};
 int a[5]={1,2,3};
 int a[]={1,2,3,4,5}
 ```
-
-
-
 **应用**
-
-
-
 ```
 //数组保存姓名
 #include<stdio.h>
@@ -1495,45 +753,21 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021628192.png)
-
-
-
 ## 2.二维数组
-
-
 **二维数组**：由行和列组成的两个一维数组
-
-
-
 **数组定义**  
 `数据类型 数组名[表达式1][表达式2]`
-
-
-
 > 先放行，再放列  
 下标可以是整型常量或整型表达式
-
-
-
 **数组引用**  
 `数组名[下标][下标]`
-
-
-
 **初始化**
-
-
-
 1.一一赋值
 2.省略行下标，不能省略列下标
 3.分组分配
 4.部分分配
 5.对元素赋值
-
 
 
 ```
@@ -1544,11 +778,7 @@ int a[2][3]={{1,2},{3,4}};
 int a[2][3];a[0][0]=1;a[0][1]=2;
 ```
 
-
-
 **应用**
-
-
 
 ```
 //输出最值并行列互换
@@ -1632,11 +862,7 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307021725402.png)
-
 
 
 ```
@@ -1668,49 +894,26 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307022300543.png)
 
 
 
 ## 3.字符数组
-
-
 **字符数组**：数据元素为字符的数组
-
-
-
 **数组定义**  
 `char 数组标识符[常量表达式]`
-
-
-
 **初始化**
-
-
-
 1.一一对应
 2.省略数组长度
 3.利用字符串
-
-
-
 ```
 char a[5]={'H','e','l','l','o'};
 char a[]={'H','e','l','l','o'};
 char a[5]={"Hello"};
 ```
-
-
-
 > \0为结束的标志  
 %c输出字符，%s输出字符串
 >
-
-
-
 ```
 //计算单词个数 
 #include<stdio.h>
@@ -1743,34 +946,13 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307030940224.png)
-
-
-
 ## 4.多维数组
-
-
 **多维数组**：与二维数组相同，不过下标更多
-
-
-
 `数据类型 数组名[常量表达式1][常量表达式2][常量表达式3]`
-
-
-
 ## 5.排序算法
-
-
 ### 5.1 选择排序法
-
-
 **选择排序法**：从小到大排列时，将第一个数字与最小值换位，第二个数字与剩下的最小值换位，以此类推，直至所以数字都换过位置
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1809,20 +991,9 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307031748551.png)
-
-
-
 ### 5.2 冒泡排序法
-
-
 **冒泡排序法**：每次比较相邻的两个数，将较小的数放在较大的数前面
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1857,20 +1028,9 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307041709555.png)
-
-
-
 ### 5.3 交换排序法
-
-
 **交换排序法**：将每一个数与后面所有数一一比较，数据符合则交换位置
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1906,20 +1066,9 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307041739086.png)
-
-
-
 ### 5.4 插入排序法
-
-
 **插入排序法**：
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -1952,21 +1101,11 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307051307508.png)
-
-
-
 ### 5.5 折半排序法
-
-
 ```
 #include<stdio.h>
-
 void CelerityRun(int left,int right,int array[]);
-
 int main()
 {
 	int i;
@@ -1986,7 +1125,6 @@ int main()
 	}
 	return 0;
 }
-
 void CelerityRun(int left,int right,int array[])
 {
 	int i,j;
@@ -2015,31 +1153,12 @@ void CelerityRun(int left,int right,int array[])
 		CelerityRun(i,right,array);
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307060922773.png)
-
-
-
 ## 6.字符串处理
-
-
 ### 6.1 字符串复制（strcpy）
-
-
 **strcpy函数**：复制特定长度的字符串到另一个字符串中
-
-
-
 `strcpy(目的字符数组名，源字符数组名)`
-
-
-
 > 不能用赋值语句直接赋值
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -2055,24 +1174,10 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307060950245.png)
-
-
-
 ### 6.2 字符串连接（strcat）
-
-
 **strcat函数**：将一个字符串连接到另一个字符串的末尾，组成一个新的字符串
-
-
-
 `strcat(目的字符数组名，源字符数组名)`
-
-
-
 ```
 int main()
 {
@@ -2087,30 +1192,13 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307060958243.png)
-
-
-
 ### 6.3 字符串比较（strcmp）
-
-
 **strcmp函数**：将一个字符串与另一个字符串一一比较
-
-
-
 `strcmp(字符数组1，字符数组2)`
-
-
-
 字符串1=字符串2 ，返回0  
 字符串1>字符串2，返回正数  
 字符串1<字符串2，返回负数
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -2150,36 +1238,13 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061018127.png)
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061020235.png)
-
-
-
 ### 6.4 字符串大小写转换（strupr/strlwr）
-
-
 **strupr函数**：将字符串中的小写字母转换为大写字母其他不变
-
-
-
 `strupr(字符串)`
-
-
-
 **strlwr函数**：将字符串中的大写字母转换为小写字母其他不变
-
-
-
 `strlwr(字符串)`
-
-
-
 ```
 #include<stdio.h>
 #include<string.h>
@@ -2217,24 +1282,10 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061047884.png)
-
-
-
 ### 6.5 字符串长度（strlen）
-
-
 **strlen函数**：计算字符串的实际长度，不含\0
-
-
-
 `strlen(字符数组名)`
-
-
-
 ```
 #include<stdio.h>
 #include<string.h>
@@ -2257,16 +1308,8 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061400397.png)
-
-
-
 ## 7.应用
-
-
 ```
 //反转字符串 
 #include<stdio.h>
@@ -2285,13 +1328,7 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061412072.png)
-
-
-
 ```
 //输出系统时间和日期 
 #include<stdio.h>
@@ -2328,20 +1365,13 @@ int main()
 	return 0;
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061532401.png)
-
-
-
 ```
 //字符串加密、解密 
 #include<stdio.h>
 #include<string.h>
 int main()
 {
-	
 	int i;
 	int result = 1;
 	int count = 0;
@@ -2387,48 +1417,18 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307061639904.png)
-
-
-
 # 六、函数
-
-
 ## 1.函数概述
-
-
 1.函数是C语言的基本单元，包含可执行代码
 2.主函数可以调用其他函数，其他函数可以相互调用
 3.函数可以有参数和返回值
-
-
-
 ## 2.函数定义
-
-
 **函数定义**：让编译器知道函数功能，包括定义函数头和函数体
-
-
-
 函数头分为返回值类型、函数名、参数表
-
-
-
 函数体包括局部变量的声明和函数的可执行代码
-
-
-
 无参函数：没有参数的函数
-
-
-
 空函数：没有任何内容的函数（占位）
-
-
-
 ```
 int AddTwoNumber(int Num1,int Num2)
 {
@@ -2437,22 +1437,11 @@ int AddTwoNumber(int Num1,int Num2)
 	return result;
 }
 ```
-
-
-
 > 函数要先声明，再定义  
 如果函数定义放在调用之前，就不需要声明
 >
-
-
-
 ## 3.返回语句
-
-
 **返回语句**：从所在函数中退出，回到调用程序中去，或者将函数值赋给调用的表达式
-
-
-
 ```
 //从函数返回
 #include<stdio.h>
@@ -2469,13 +1458,7 @@ int Function()
 	printf("这是输出中\n");
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307081135064.png)
-
-
-
 ```
 //返回函数值 
 #include<stdio.h>
@@ -2493,13 +1476,7 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307081550416.png)
-
-
-
 ```
 #include<stdio.h>
 char ShowChar();
@@ -2518,27 +1495,11 @@ char ShowChar()
 	return Number;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307081557175.png)
-
-
-
 ## 4.函数参数
-
-
 ### 4.1 形参与实参
-
-
 **形式参数**：形式上存在的参数，放在括号里面，在拿书调用之前，传递给函数的值将被复制到形式参数中
-
-
-
 **实际参数**：实际存在的参数，函数调用者提供给函数的参数
-
-
-
 ```
 #include<stdio.h>
 void DrinkMilk(char *Bottle);
@@ -2555,22 +1516,11 @@ void DrinkMilk(char *Bottle)
 	printf("宝宝喝%s\n",Bottle);
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100810565.png)
-
-
-
 ### 4.2 数组参数
-
-
 > 数组作为实参时，只传递数组的地址，而不是传递整个数组  
 数组名作实参时，传递数组第一个元素的指针
 >
-
-
-
 ```
 #include<stdio.h>
 void ShowMember(int Member);
@@ -2594,13 +1544,7 @@ void ShowMember(int Member)
 	printf("数组元素为：%d\n",Member);
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100824091.png)
-
-
-
 ```
 #include<stdio.h>
 void Evalute(int b[10]);
@@ -2629,16 +1573,8 @@ void Evalute(int b[10])
 	}
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100910582.png)
-
-
-
 ### 4.3 指针作参数
-
-
 ```
 #include<stdio.h>
 void Evalute(int *Point);
@@ -2667,24 +1603,10 @@ void Evalute(int *Point)
 	}
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100919526.png)
-
-
-
 ### 4.4 main函数参数
-
-
 **argc**：保存命令行的参数个数，整型
-
-
-
 **argv**：指向字符指针数组的指针
-
-
-
 ```
 #include<stdio.h>
 int main(int argc,char *argv[])
@@ -2693,27 +1615,11 @@ int main(int argc,char *argv[])
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100925965.png)
-
-
-
 ## 5.函数调用
-
-
 **调用方式**分为函数语句调用，函数表达式调用，函数参数调用
-
-
-
 ### 5.1 函数语句调用
-
-
 **函数语句调用**：把函数的调用作为一个语句
-
-
-
 ```
 #include<stdio.h>
 void Display()
@@ -2726,20 +1632,9 @@ int main()
 	return 0; 
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100935771.png)
-
-
-
 ### 5.2 函数表达式调用
-
-
 **函数表达式调用**：函数出现一个表达式中
-
-
-
 ```
 #include<stdio.h>
 int AddTwoNum(int Num1,int Num2);
@@ -2758,20 +1653,9 @@ int AddTwoNum(int Num1,int Num2)
 	return tempResult;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307100949623.png)
-
-
-
 ### 5.3 函数参数调用
-
-
 **函数参数调用**：将函数返回值作为实参，传递到函数中使用
-
-
-
 ```
 #include<stdio.h>
 int AddTwoNum(int Num1,int Num2);
@@ -2789,21 +1673,10 @@ int AddTwoNum(int Num1,int Num2)
 	return TempResult;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307101006226.png)
-
-
-
 ### 5.4 嵌套调用
-
-
 > 函数定义相互平行，一个函数体内不能定义另一个函数
 >
-
-
-
 ```
 #include<stdio.h>
 void First();
@@ -2835,16 +1708,8 @@ void Final()
 	printf("这是最后一步");
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307121507498.png)
-
-
-
 ### 5.5 递归调用
-
-
 ```
 #include<stdio.h>
 void Display(char **a);
@@ -2870,37 +1735,15 @@ void Display(char **a)
 	}
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307130915222.png)
-
-
-
 ## 6.内部函数和外部函数
-
-
 > 函数是c语言中最小的单位
 >
-
-
-
 ### 6.1 内部函数
-
-
 **内部函数**：函数只被所在源文件使用
-
-
-
 `static 返回值类型 函数名（参数列表）`
-
-
-
 > 不同源文件中的相同函数名不会冲突
 >
-
-
-
 ```
 #include<stdio.h>
 static char* Get(char* p)
@@ -2919,20 +1762,9 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714155112.png)
-
-
-
 ### 6.2 外部函数
-
-
 **外部函数**：可以被其他源文件调用的函数
-
-
-
 ```
 //文件1
 #include<stdio.h>
@@ -2956,23 +1788,10 @@ extern void Show(char* p)
 	printf("%s\n",p);
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714160037.png)
-
-
-
 ## 7.局部变量和全局变量
-
-
 ### 7.1 局部变量
-
-
 **局部变量**：在函数内部定义的变量，无法被其他函数所引用
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -2994,25 +1813,11 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714154404.png)
-
-
-
 > 位于不同作用域的变量，可以使用相同的标识符
 >
-
-
-
 ### 7.2 全局变量
-
-
 **全局变量**：在函数外声明的变量，属于源文件
-
-
-
 ```
 #include<stdio.h>
 int GlobalPrice = 100;
@@ -3050,25 +1855,12 @@ void ChangePrice()
 	scanf("%d",&GlobalPrice); 
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714162207.png)
-
-
-
 ## 8.数学公式
-
-
 ### 8.1 绝对值
-
-
 **abs函数**：求整数绝对值  
 **labs函数**：求长整数绝对值  
 **fabs函数**：求浮点数绝对值
-
-
-
 ```
 #include<stdio.h>
 #include<math.h>
@@ -3089,31 +1881,14 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714171803.png)
-
-
-
 ### 8.2 三角函数
-
-
 **sin函数**：求正弦函数  
 `double sin(double x);`
-
-
-
 **cos函数**：求余弦函数  
 `double cos(double x);`
-
-
-
 **tan函数**：求正切函数  
 `double tan(double x);`
-
-
-
 ```
 #include<stdio.h>
 #include<math.h>
@@ -3134,31 +1909,14 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714174547.png)
-
-
-
 ### 8.3 字符检测
-
-
 **isalpha函数**：检测字母，是字母返回非零  
 `int isalpha(int ch)`
-
-
-
 **isdigit函数**：检测数字，是数字返回非零  
 `int isdigit(int ch)`
-
-
-
 **isalnum函数**：检测数字或字母，是二者之一返回非零  
 `int isalnum(int ch)`
-
-
-
 ```
 #include<stdio.h>
 #include<ctype.h>
@@ -3199,53 +1957,35 @@ void Switch(char c)
 	}
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230714180850.png)
 
-
-
 # 七、指针
-
-
 ## 1.概念
 
+什么是指针？
+> 指针是一个变量，其值为另一个变量的地址，即内存位置的直接地址。保存变量地址的变量。
+
+为什么要使用指针？
+> 生成更高效紧凑的代码
+
+
+
+```
+
+```
 
 ### 1.1 地址、变量与指针
 
-
 **地址**：内存区中对每个字节的编号
-
-
-
 **指针**：内存中的一个地址
-
-
-
 **指针变量**：存放另一个变量的地址
-
-
-
 `类型说明 * 变量名`
-
-
-
 > *表示该变量为指针变量  
 变量名为指针变量名  
 类型说明为指向的变量类型
 >
-
-
-
 **指针赋值**：只能赋予地址，不能赋予其他数据
-
-
-
 `& 变量名`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -3259,21 +1999,11 @@ int main()
 	printf("两个数分别为：%d,%d",*point1,*point2);
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230715085648.png)
-
-
 
 **引用指针变量**：引用指针变量所指向的值
 
-
-
 `*指针变量`
-
-
-
 ```
 #include<stdio.h>
 int main()
@@ -3285,28 +2015,14 @@ int main()
 	printf("数字为：%d",*p);
 }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/20230715090327.png)
-
-
-
 ### 1.2 指针运算
-
-
 &  取值运算符  
 *  指针运算符  
 &*   先指针后取值  
 *&  先取值后指针
-
-
-
 > 指针自增自减按所指向类型的直接长度进行增减
 >
-
-
-
 ```
 #include<stdio.h>
 main()
@@ -3321,20 +2037,9 @@ main()
 	printf("结果2为：%d\n",p);
  }
 ```
-
-
-
 ![](https://djm-1317856319.cos.ap-shanghai.myqcloud.com/djm-1317856319/202307161037737.png)
-
-
-
 ## 2.数组与指针
-
-
 **数组指针**：存储数组的首地址
-
-
-
 ```
 #include<stdio.h>
 main()
@@ -3370,22 +2075,10 @@ main()
 	return 0;
 }
 ```
-
-
-
 **二维数组**：
-
-
-
 > *(a+i)与a[i]是等价的
 >
-
-
-
 **字符串指针**
-
-
-
 ```
 #include<stdio.h>
 main()
@@ -3406,17 +2099,8 @@ main()
 	puts(str2);
 }
 ```
-
-
-
 **字符串数组**
-
-
-
 `类型名 数组名[数组长度]`
-
-
-
 ```
 #include<stdio.h>
 main()
@@ -3443,16 +2127,8 @@ main()
 	}
 }
 ```
-
-
-
 ## 3.双重指针
-
-
 `类型标识符 **指针变量名`
-
-
-
 ```
 #include<stdio.h>
 main()
@@ -3481,12 +2157,7 @@ main()
 	}
 }
 ```
-
-
-
 ## 4.函数参数
-
-
 ```
 //交换地址 
 #include<stdio.h>
@@ -3509,46 +2180,23 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ```
 //嵌套调用
 ```
-
-
-
 ```
 //奇数之和
 ```
-
-
-
 ```
 //冒泡排序
 ```
-
-
-
 ```
 //字母顺序排序
 ```
-
-
-
 ```
 //数组元素求和
 ```
-
-
-
 ## 5.指针函数
-
-
 `类型名 *函数名（参数列表）*`
-
-
-
 ```
 #include<stdio.h>
 int per(int a,int b);
@@ -3565,12 +2213,7 @@ int per(int a,int b)
 	return (a+b)*2;
 }
 ```
-
-
-
 ## 6.main参数
-
-
 ```
 #include<stdio.h>
 main(int argc,char *argv[])
@@ -3579,35 +2222,17 @@ main(int argc,char *argv[])
 	printf("参数个数：%d\n",argc);
 }
 ```
-
-
-
 # 八、结构体与共用体
-
-
 ## 1.结构体
-
-
 ### 1.1 定义与声明
-
-
 **结构体**：由不同数据类型组成的有机整体
-
-
-
 先声明，再定义
-
-
-
 ```
 struct 结构体名
 {
 	成员列表;
 };
 ```
-
-
-
 ```
 struct Product
 {
@@ -3619,22 +2244,13 @@ struct Product
 	char Area[20];    //产品产地
 };
 ```
-
-
-
 声明的同时定义
-
-
-
 ```
 struct 结构体名
 {
 	成员列表;
 }变量名列表;
 ```
-
-
-
 ```
 struct Product
 {
@@ -3646,22 +2262,13 @@ struct Product
 	char Area[20];    //产品产地
 }product1,product2;
 ```
-
-
-
 直接定义
-
-
-
 ```
 struct
 {
 	成员列表；
 }变量名列表;
 ```
-
-
-
 ```
 struct
 {
@@ -3673,35 +2280,18 @@ struct
 	char Area[20];    //产品产地
 }product1,product2;
 ```
-
-
-
 > 不要忘记结构体后的分号  
 通常将结构体的声明放在头文件中
 >
-
-
-
 ### 1.2 引用
-
-
 `结构体变量.成员名`
-
-
-
 ```
 product1.Name="Icebox";
 product2.Price="2000";
 ```
-
-
-
 > 只能对最低级的结构体成员进行操作，不能直接操作结构体  
 既能引用结构体成员地址，也能直接引用结构体变量地址
 >
-
-
-
 ```
 #include<stdio.h>
 struct Product
@@ -3737,12 +2327,7 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ### 1.3 初始化
-
-
 ```
 #include<stdio.h>
 struct Student
@@ -3761,24 +2346,14 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ## 2.结构体数组
-
-
 ### 2.1 定义
-
-
 ```
 struct 结构体名
 {
 	成员列表；
 }数组名；
 ```
-
-
-
 ```
 struct Student
 {
@@ -3788,21 +2363,13 @@ struct Student
 	int Grade;
 }student[5];
 ```
-
-
-
 ### 2.2 初始化
-
-
 ```
 struct 结构体名
 {
 	成员列表；
 }数组名={初始值列表}；
 ```
-
-
-
 ```
 #include<stdio.h>
 struct Student
@@ -3827,41 +2394,15 @@ int main()
 	}
 }
 ```
-
-
-
 ## 3.结构体指针
-
-
 ### 3.1 指向结构体变量
-
-
 #### 定义
-
-
 `结构体类型 \*指针名`
-
-
-
 #### 引用
-
-
 + 使用点运算符引用结构成员
-
-
-
 `(*pStruct).成员名`
-
-
-
 + 使用指向运算符引用结构成员
-
-
-
 `pStruct->成员名`
-
-
-
 ```
 #include<stdio.h>
 #include<string.h>
@@ -3883,12 +2424,7 @@ int main()
 	printf("姓名：%s\n学号：%d\n性别：%c\n成绩：%d\n",student.Name,student.Number,student.Sex,student.Grade);
 }
 ```
-
-
-
 ### 3.2 指向结构体数组
-
-
 ```
 #include<stdio.h>
 struct Student
@@ -3916,15 +2452,8 @@ int main()
 	return 0;
 }
 ```
-
-
-
 ### 3.3 结构体作函数参数
-
-
 #### 结构体变量
-
-
 ```
 #include<stdio.h>
 struct Student
@@ -3943,10 +2472,7 @@ int main()
 	return 0;
 }
 ```
-
 #### 指向结构体变量指针
-
-
 ```
 #include<stdio.h>
 struct Student
@@ -3967,15 +2493,8 @@ int main()
 	return 0;
  }
 ```
-
-
-
 #### 结构体变量成员
-
-
 ## 4.包含结构的结构
-
-
 ```
 #include<stdio.h>
 struct data
@@ -3997,24 +2516,13 @@ int main()
 	return 0;
 }
 ```
-
 ## 5.链表
-
 ### 5.1 概述
-
 链表必须利用指针实现
-
 ### 5.2 动态链表
-
 **malloc函数**：在内存中动态的分配一块内存空间
-
 `void *malloc(int size);`
-
 **calloc函数**：在内存中动态分配n个连续内存空间
-
 `void calloc(unsigned n,unsigned size);`
-
 **free函数**：使用指针指向的内存区
-
 `void free(void *p);`
-

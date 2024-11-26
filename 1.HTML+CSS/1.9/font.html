@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font3/iconfont.css">
+    <script src="./font3/iconfont.js"></script>
+</head>
+
+<body>
+    <!-- 默认字体 -->
+    <div class="box">春风得意马蹄疾，一日看尽长安花。</div>
+    <!-- 字体1 -->
+    <div class="box2">春风得意马蹄疾，一日看尽长安花。</div>
+    <!-- 字体2 -->
+    <div class="box3">春风得意马蹄疾，一日看尽长安花。</div>
+    <!-- 图标1 -->
+    <div class="box4">
+        <span>&#xeba2;</span>
+        <span>&#xeba3;</span>
+        <span>&#xeba4;</span>
+    </div>
+    <!-- 图标2 -->
+    <div class="box4">
+        <span class="iconfont icon-APK"></span>
+        <span class="iconfont icon-EXE"></span>
+        <span class="iconfont icon-GIF"></span>
+    </div>
+    <!-- 图标3 -->
+    <div class="box5">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shengdanshu"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shengdanliwudai"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-xuehua"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shengdanliwu"></use>
+        </svg>
+    </div>
+</body>
+
+<style>
+    @font-face {
+        font-family: "字魂白鸽天行体";
+        src: url(./font1/字魂白鸽天行体.ttf);
+    }
+
+    @font-face {
+        font-family: 'webfont';
+        font-display: swap;
+        src: url('./font2/webfont.eot');
+        /* IE9 */
+        src: url('./font2/webfont.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('./font2/webfont.woff2') format('woff2'),
+            url('./font2/webfont.woff') format('woff'),
+            /* chrome、firefox */
+            url('./font2/webfont.ttf') format('truetype'),
+            /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('./font2/webfont.svg#webfont') format('svg');
+        /* iOS 4.1- */
+    }
+
+    @font-face {
+        font-family: 'iconfont';
+        src: url('./font3/iconfont.woff2?t=1732547902293') format('woff2'),
+            url('./font3/iconfont.woff?t=1732547902293') format('woff'),
+            url('./font3/iconfont.ttf?t=1732547902293') format('truetype');
+    }
+
+    .box {
+        font-size: 30px;
+    }
+
+    .box2 {
+        font-size: 30px;
+        font-family: "字魂白鸽天行体";
+    }
+
+    .box3 {
+        font-size: 30px;
+        font-family: 'webfont';
+    }
+
+    .box4 span {
+        font-size: 100px;
+        font-family: 'iconfont';
+    }
+</style>
+
+</html>

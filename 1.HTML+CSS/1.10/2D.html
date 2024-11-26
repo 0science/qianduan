@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box1">
+        <span>位移</span>
+        <div class=box>
+            <div>无位移</div>
+            <div class="outer">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>水平位移</div>
+            <div class="outer">
+                <div class="inner1"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>垂直位移</div>
+            <div class="outer">
+                <div class="inner2"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>水平垂直位移</div>
+            <div class="outer">
+                <div class="inner3"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>水平垂直居中</div>
+            <div class="outer">
+                <div class="inner4"></div>
+            </div>
+        </div>
+    </div>
+
+     <div class="box1">
+        <span>缩放</span>
+        <div class=box>
+            <div>水平缩放</div>
+            <div class="outer">
+                <div class="inner5"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>垂直缩放</div>
+            <div class="outer">
+                <div class="inner6"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>水平垂直缩放</div>
+            <div class="outer">
+                <div class="inner7"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box1">
+        <span>旋转</span>
+        <div class=box>
+            <div>顺时针旋转</div>
+            <div class="outer">
+                <div class="inner8"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>逆时针旋转</div>
+            <div class="outer">
+                <div class="inner9"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="box1">
+        <span>扭曲</span>
+        <div class=box>
+            <div>水平扭曲</div>
+            <div class="outer">
+                <div class="inner10"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>垂直扭曲</div>
+            <div class="outer">
+                <div class="inner11"></div>
+            </div>
+        </div>
+        <div class=box>
+            <div>水平垂直扭曲</div>
+            <div class="outer">
+                <div class="inner12"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box1">
+        <span>多重变换</span>
+        <div class=box>
+            <div>位移旋转</div>
+            <div class="outer">
+                <div class="inner13"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box1">
+        <span>原点变换</span>
+        <div class=box>
+            <div>原点旋转</div>
+            <div class="outer">
+                <div class="inner14"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .box1{
+        width: 100%;
+        padding: 50px 20px 30px 20px;
+        display: flex;
+        background-color: rgb(255, 245, 231);
+    }
+
+    span{
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .box1:nth-child(even){
+        background-color:rgb(231, 255, 247);
+    }
+
+
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        margin: 0 80px ;
+    }
+
+    .outer {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        margin: 40px 0 80px 0;
+    }
+
+    .inner {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+
+    }
+
+    .inner1 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+
+        transform: translateX(50px);
+    }
+
+    .inner2 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: translateY(50px);
+    }
+
+    .inner3 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: translate(50px, 50px);
+    }
+
+    .inner4 {
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        transform: translate(50%, 50%);
+    }
+
+    .inner5 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: scaleX(1.2);
+    }
+
+    .inner6 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: scaleY(1.2);
+    }
+    .inner7 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: scale(1.2);
+    }
+    .inner8 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: rotate(10deg);
+    }
+    .inner9 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: rotate(-10deg);
+    }
+    .inner10 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: skewX(45deg);
+    }
+    .inner11 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: skewY(45deg);
+    }
+    .inner12 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: skew(30deg,30deg);
+    }
+    .inner13 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform: translate(30px, 30px) rotate(60deg) skew(30deg,30deg);
+    }
+    .inner14 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transform-origin:left top;
+        transform:rotate(20deg);
+    }
+</style>
+
+</html>

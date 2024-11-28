@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+</head>
+<body>
+    
+    <div class="outer">
+        <span>长宽颜色</span>
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+
+<style>
+   .outer{
+    margin: 100px auto;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transition-duration: 2s ;
+        transition-property:all;
+    }
+   .outer:hover{
+        transform: scale(2,2);
+        background-color: green;
+    }
+</style>
+
+</html>

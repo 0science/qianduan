@@ -8,9 +8,9 @@
 
 <body>
     <div class="box1">
-        <span>位移</span>
+        <span>3D位移</span>
         <div class=box>
-            <div>无位移</div>
+            <div>默认</div>
             <div class="outer">
                 <div class="inner"></div>
             </div>
@@ -28,21 +28,22 @@
             </div>
         </div>
         <div class=box>
-            <div>水平垂直位移</div>
+            <div>水平垂直高度位移</div>
             <div class="outer">
                 <div class="inner3"></div>
             </div>
         </div>
+       
+    </div>
+
+    <div class="box1">
+        <span>缩放</span>
         <div class=box>
             <div>水平垂直居中</div>
             <div class="outer">
                 <div class="inner4"></div>
             </div>
         </div>
-    </div>
-
-    <div class="box1">
-        <span>缩放</span>
         <div class=box>
             <div>水平缩放</div>
             <div class="outer">
@@ -64,7 +65,7 @@
     </div>
 
     <div class="box1">
-        <span>旋转</span>
+        <span>3D旋转</span>
         <div class=box>
             <div>顺时针旋转</div>
             <div class="outer">
@@ -81,29 +82,7 @@
     </div>
 
     <div class="box1">
-        <span>扭曲</span>
-        <div class=box>
-            <div>水平扭曲</div>
-            <div class="outer">
-                <div class="inner10"></div>
-            </div>
-        </div>
-        <div class=box>
-            <div>垂直扭曲</div>
-            <div class="outer">
-                <div class="inner11"></div>
-            </div>
-        </div>
-        <div class=box>
-            <div>水平垂直扭曲</div>
-            <div class="outer">
-                <div class="inner12"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box1">
-        <span>多重变换</span>
+        <span>3D多重变换</span>
         <div class=box>
             <div>位移旋转</div>
             <div class="outer">
@@ -197,7 +176,7 @@
         width: 100px;
         height: 100px;
         background-color: aqua;
-        transform: translate(50px, 50px);
+        transform: translate3D(50px, 50px, 50px);
     }
 
     .inner4 {
@@ -232,7 +211,7 @@
         width: 100px;
         height: 100px;
         background-color: aqua;
-        transform: rotate(10deg);
+        transform: rotate3D(1,1,1,30deg);
     }
 
     .inner9 {
@@ -267,7 +246,8 @@
         width: 100px;
         height: 100px;
         background-color: aqua;
-        transform: translate(30px, 30px) rotate(60deg) skew(30deg, 30deg);
+        transform-origin: left top;
+        transform:rotateY(45deg) ;
     }
 
     .inner14 {

@@ -1,3 +1,4 @@
+// 输出“Hello World!”
 #include <stdio.h> /*包含头文件stdio.h*/
 int main()         /*主函数main*/
 {

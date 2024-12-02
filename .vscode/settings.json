@@ -59,5 +59,6 @@
   "files.associations": {
     "*.vue": "vue",
     "stdio.h": "c"
-  }
+  },
+  "marscode.chatLanguage": "cn"
 }

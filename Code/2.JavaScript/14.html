@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>查找最值</title>
+</head>
+
+<body>
+    <script>
+        // 假设数据
+        var arr = [100, 7, 56, 150, 37, 5];
+        var max = min = arr[0];
+        // 查找最大值
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        document.write("最大值：" + max +"<br>");
+        document.write("最小值：" + min);
+    </script>
+</body>
+
+</html>

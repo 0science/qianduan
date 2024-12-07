@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网页计算器</title>
+</head>
+ 
+<body>
+<div>
+	<p>数字1：<input type="text" id="num1"/></p>
+	<p>数字2：<input type="text" id="num2"/></p>
+	<p>
+		<input type="button" value="相加" onclick="add()"/>
+		<input type="button" value="相减" onclick="sub()"/>
+		<input type="button" value="相乘" onclick="mul()"/>
+		<input type="button" value="相除" onclick="div()"/>
+	</p>
+	<p>结果（数字1 op 数字2）：<p><input type="text" id="result"/></p></p>
+</div>
+<script>
+	
+	function add(){
+		var num1=parseFloat(document.getElementById("num1").value);
+		var num2=parseFloat(document.getElementById("num2").value);
+		if(isNaN(num1)||isNaN(num2)){
+			alert("请输入数字！");
+		}else{
+			result.value=(num1+num2).toFixed(2);
+			return result.value;
+		}
+	}
+	function sub(){
+		var num1=parseFloat(document.getElementById("num1").value);
+		var num2=parseFloat(document.getElementById("num2").value);
+		if(isNaN(num1)||isNaN(num2)){
+			alert("请输入数字！");
+		}else{
+			result.value=(num1-num2).toFixed(2);
+			return result.value;
+		}
+	}
+	function mul(){
+		var num1=parseFloat(document.getElementById("num1").value);
+		var num2=parseFloat(document.getElementById("num2").value);
+		if(isNaN(num1)||isNaN(num2)){
+			alert("请输入数字！");
+		}else{
+			result.value=(num1*num2).toFixed(2);
+			return result.value;
+		}
+	}
+	function div(){
+		var num1=parseFloat(document.getElementById("num1").value);
+		var num2=parseFloat(document.getElementById("num2").value);
+		if(isNaN(num1)||isNaN(num2)){
+			alert("请输入数字！");
+		}else if(num2==0){
+			alert("除数不能为0！");
+		}else{
+			result.value=(num1/num2).toFixed(2);
+			return result.value;
+		}
+	}
+	
+	
+</script>
+</body>
+</html>

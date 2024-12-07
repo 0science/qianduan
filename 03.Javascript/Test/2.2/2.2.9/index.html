@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="table"></div>
+    <script>
+        var str = '<table>';
+        for(var i = 1;i<10;i++){
+            str += '<tr>';
+            for(var j=1;j<=i;j++){
+                str += `<td>${j}*${i}=${i*j}</td>`
+            }
+            str += '</tr>'
+        }
+        str +='</table>'
+        document.getElementById('table').innerHTML = str;
+    </script>
+    <style>
+        table{
+            border-collapse: collapse
+        }
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</body>
+</html>

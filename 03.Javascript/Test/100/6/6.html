@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试是否及格</title>
+</head>
+
+<body>
+    <script>
+        var score = prompt("请输入成绩：");
+        if (isNaN(score)) {
+            alert("请输入数字！");
+        } else {
+            if (score >= 60) {
+                document.write("及格");
+            } else {
+                document.write("不及格");
+            }
+        }
+    </script>
+</body>
+
+</html>

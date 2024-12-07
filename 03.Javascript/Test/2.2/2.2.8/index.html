@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var level = prompt('请输入金字塔层数：');
+        // 判断是否为数字
+        level = parseFloat(level) && Number(level);
+        //判断输入是否合法
+        if(isNaN(level) || level <= 0){
+            alert('金字塔的层数必须是正整数')
+        };
+        //遍历金子塔层数
+        for(var i = 1;i <= level;i++){
+            //打印空格
+            var blank = level -i;
+            for(var j=1;j<=blank;j++){
+                document.write('&nbsp;')            
+            }
+            //打印星星
+            var star = 2*i-1
+            for(var k=1;k<=star;k++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>

@@ -55,20 +55,31 @@
 ### 计算圆的周长和面积
 
 对话框中输入圆的半径，算出圆的面积并显示到页面
-<img border="1" src="/preview/2.2/2.2.1.1.png">
-<img border="1" src="/preview/2.2/2.2.1.2.png">
-[计算圆的周长和面积](./2.1/2.1.1/01.html)
+<img border="1" src="./image/circle.gif">
+[计算圆的周长和面积](./code/circle.html)
 
 ```
-
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>计算圆的面积</title>
+</head>
+<body>
+    <script>
+        let r = prompt('请输入圆的半径：')
+        let s = Math.PI*r*r
+        document.write('圆的面积是：',s.toFixed(2))
+    </script>
+</body>
+</html>
 ```
 
 ### 打印金字塔
 
 用户输入一个数字，打印出对应层数的金字塔
-<img border="1" src="/preview/2.2/2.2.7.1.png">
-<img border="1" src="/preview/2.2/2.2.7.2.png">
-[打印金字塔](./2.1/2.1.1/01.html)
+<img border="1" src="./image/pyramid.gif">
+[打印金字塔](./code/pyramid.html)
 
 ```
 <!DOCTYPE html>
@@ -106,7 +117,7 @@
 ```
 
 ### 九九乘法表
-
+打印乘法表和表格
 <img border="1" src="/preview/2.2/2.2.8.png">
 
 ```
@@ -144,6 +155,39 @@
 
 
 ### 查找最值
+
+
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>查找最值</title>
+</head>
+
+<body>
+    <script>
+        // 假设数据
+        var arr = [100, 7, 56, 150, 37, 5];
+        var max = min = arr[0];
+        // 查找最大值
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        document.write("最大值：" + max + "<br>");
+        document.write("最小值：" + min);
+    </script>
+</body>
+
+</html>
+```
 
 ### 二维数组转置
 

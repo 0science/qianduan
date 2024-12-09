@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>插入排序</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 2, 35, 12, 27, 98, 21];
+        console.log(arr);
+        //确定循环次数
+        for (var i=0;i<arr.length;i++) {
+            //确定比较次数，每次循环比较的次数减少一个
+            for(var j=i;j>0;j--){
+                if(arr[j-1]>arr[j]){
+                    [arr[j-1],arr[j]] = [arr[j],arr[j-1]]
+                }
+            }
+        }
+        console.log(arr);    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>猴子选大王</title>
+</head>
+<body>
+    <script>
+        var total = prompt('请输入猴子的数目：');
+        var kick = prompt('请输入踢出猴子的数字：');
+        // 初始化猴子数组
+        var money = [];
+        for(i =0;i<total;i++){
+            // 猴子数组赋值
+            // 数组下标从0开始所以+1
+            money.push(i+1);
+        }
+        console.log(money);
+        // 定义一个变量记录当前数组的下标
+        var index = 0;
+        // 当候数组的长度大于1时循环
+        while(money.length>1){
+            // 猴子报数
+            ++index
+            // 取出数组的第一个元素
+            head = money.shift();
+            // 判断当前下标是否是踢出猴子的数字
+            if(index%kick==0){
+                console.log(head+' 出局');
+            }else{
+                money.push(head);
+            } 
+        }
+        console.log('大王是：'+money[0]);
+    </script>   
+</body>
+</html>

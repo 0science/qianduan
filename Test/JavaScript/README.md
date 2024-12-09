@@ -191,7 +191,195 @@
 
 ### 二维数组转置
 
+将二维数组的行和列互换，输出到页面或者命令行
+<img border="1" src="./image/transpose.png">
+[二维数组转置](./code/transpose.html)
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>二维数组转置</title>
+</head>
+
+<body>
+    <script>
+        var arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        console.log(arr);
+        document.write(arr[0] + '<br>');
+        document.write(arr[1] + '<br>');
+        document.write(arr[2] + '<br>');
+        document.write('<br>');
+        // 定义一个空数组
+        var res = [];
+        for (var i = 0; i < arr[0].length; i++) {
+            // 数组赋值
+            res[i] = [] 
+            for (var j = 0; j < arr.length; j++) {
+                // 数组交换
+                res[i][j] = arr[j][i];
+            }
+        }
+        document.write(res[0] + '<br>');
+        document.write(res[1] + '<br>');
+        document.write(res[2] + '<br>');
+        console.log(res);
+    </script>
+</body>
+
+</html>
+```
+
+### 冒泡排序
+
+将数组的元素按从小到大的顺序排序
+<img border="1" src="./image/bubble.png">
+[冒泡排序](./code/bubble.html)
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+</head>
+<body>
+    <script>
+        var arr = [10,2,35,12,27,98,21];
+        document.write(arr + '<br>'); 
+        //确定定循环次数
+        for(var i=0;i<arr.length;i++){
+            //确定比较次数，每次循环比较的次数减少一个
+            for(var j=0;j<arr.length -i;j++){
+                //判断大小
+                if(arr[j]>arr[j+1]){
+                    //交换位置
+                    [arr[j],arr[j+1]] = [arr[j+1],arr[j]];
+                }
+            }
+        }
+        document.write(arr);
+    </script>
+</body>
+</html>
+```
+
+### 插入排序
+
+将数组的元素按从小到大的顺序排序
+<img border="1" src="./image/insertion.png">
+[插入排序](./code/insertion.html)
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>插入排序</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 2, 35, 12, 27, 98, 21];
+        console.log(arr);
+        //确定循环次数
+        for (var i=0;i<arr.length;i++) {
+            //确定比较次数，每次循环比较的次数减少一个
+            for(var j=i;j>0;j--){
+                if(arr[j-1]>arr[j]){
+                    [arr[j-1],arr[j]] = [arr[j],arr[j-1]]
+                }
+            }
+        }
+        console.log(arr);    
+    </script>
+</body>
+
+</html>
+```
+
+### 栈和队列
+
+用数组模拟栈和队列
+<img border="1" src="./image/stack.png">
+[栈和队列](./code/stack.html)
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栈和队列</title>
+</head>
+<body>
+    <script>
+        var stack = [1,2,3];
+        var queue = ['a','b','c'];
+        console.log('初始栈',stack);
+        stack.push(4);
+        console.log('栈(进一)',stack);
+        stack.pop();
+        console.log('栈(出一)',stack);
+        console.log('初始队列',queue);
+        queue.push('d');
+        console.log('队列(进一)',queue);
+        queue.shift();
+        console.log('队列(出一)',queue);
+    </script>
+</body>
+</html>
+```
+
 ### 猴子选大王
+
+从1数到m,去除m，再从1数到m，去除m，直到只剩一个，输出这个数
+<img border="1" src="./image/monkey.gif">
+[猴子选大王](./code/monkey.html)
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>猴子选大王</title>
+</head>
+<body>
+    <script>
+        var total = prompt('请输入猴子的数目：');
+        var kick = prompt('请输入踢出猴子的数字：');
+        // 初始化猴子数组
+        var money = [];
+        for(i =0;i<total;i++){
+            // 猴子数组赋值
+            // 数组下标从0开始所以+1
+            money.push(i+1);
+        }
+        console.log(money);
+        // 定义一个变量记录当前数组的下标
+        var index = 0;
+        // 当候数组的长度大于1时循环
+        while(money.length>1){
+            // 猴子报数
+            ++index
+            // 取出数组的第一个元素
+            head = money.shift();
+            // 判断当前下标是否是踢出猴子的数字
+            if(index%kick==0){
+                console.log(head+' 出局');
+            }else{
+                money.push(head);
+            } 
+        }
+        console.log('大王是：'+money[0]);
+    </script>   
+</body>
+</html>
+```
 
 ### 省市联选器
 
